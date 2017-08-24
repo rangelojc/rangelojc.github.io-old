@@ -1,0 +1,175 @@
+@keyframes fadeMeIn {
+    from {
+        margin-top: 8vw;
+        opacity: 0.7;
+    }
+}
+
+body{
+    font-family: "Tahoma";
+    margin: 0; padding: 0;
+}
+
+/*Loaded Box*/
+#loadedTitle {
+    position: absolute;
+    text-align: center;
+    background-color: #5E5E5E;
+    width: 40vw; line-height: 3vw;
+    color: white;
+    font-size: 1.5vw;
+}
+
+div#modalLoaded {
+    display: block;
+    box-shadow: 0.6vw 0.6vw 0.5vw 0.1vw #808080;
+    background-color: #9E9E9E;
+    height: 20vw; width: 40vw;
+    margin: 10vw 0 0 30vw;
+
+    -webkit-animation: fadeMeIn 0.1s ease-in;
+    -moz-animation: fadeMeIn 0.1s ease-in;
+    animation: fadeMeIn 0.1s ease-in;
+}
+
+div#loadedProfile {
+    position: absolute;
+    color: white;
+    font-size: 1.5vw;
+    margin-left: 14vw; margin-top: 4.5vw;
+}
+
+img#loadedAvatar {
+    position: absolute;
+    margin-left: 1.5vw; margin-top:5vw;
+    height: 12vw; width: 11vw;
+}
+
+button#newProfile {
+    position: absolute;
+    color: #9E9E9E; font-weight: bold;
+    margin-left: 14.5vw; margin-top: 16vw;
+    background-color: white;
+    border: none; height: 3vw; width: 10vw;
+    cursor: pointer; font-size: 1vw;
+}
+button#resetProfile {
+    position: absolute;
+    color: #9E9E9E; font-weight: bold;
+    margin-left: 25.5vw; margin-top: 16vw;
+    background-color: white;
+    border: none; height: 3vw; width: 10vw;
+    cursor: pointer; font-size: 1vw;
+}
+
+/*Gender Selection Box*/
+div#modalIndex{
+    display: none;
+    box-shadow: 0.6vw 0.6vw 0.5vw 0.1vw #808080;
+    background-color: #B388FF;
+    height: 20vw; width: 40vw;
+    margin: 10vw 0 0 30vw;
+
+    -webkit-animation: fadeMeIn 0.1s ease-in;
+    -moz-animation: fadeMeIn 0.1s ease-in;
+    animation: fadeMeIn 0.1s ease-in;
+}
+
+span#index {
+    position: absolute;
+    margin-left: 12.5vw; margin-top: 1vw;
+    color: white;
+    font-size: 1.5vw;
+}
+
+img#femaleIcon, img#maleIcon {
+    position: absolute;
+    height: 12vw; width: 11vw;
+    cursor: pointer;
+}
+
+img#femaleIcon {
+    margin-left: 24vw; margin-top: 5vw;
+}
+
+    img#femaleIcon:hover {
+    margin-left: 23vw; margin-top: 4vw;
+    height: 14vw; width: 13vw;
+    }
+
+img#maleIcon {
+    margin-left: 5vw; margin-top: 5vw;
+}
+    img#maleIcon:hover {
+    margin-left: 4vw; margin-top: 4vw;
+    height: 14vw; width: 13vw;
+    }
+
+/*Male Box*/
+div#modalGenerateMale {
+    display: none;
+    box-shadow: 0.6vw 0.6vw 0.5vw 0.1vw #808080;
+    background-color: #82B1FF;
+    height: 20vw; width: 40vw;
+    margin: 10vw 0 0 30vw;
+
+    -webkit-animation: fadeMeIn 0.1s ease-in;
+    -moz-animation: fadeMeIn 0.1s ease-in;
+    animation: fadeMeIn 0.1s ease-in;
+}
+
+button#generateMale, button#refreshMale {
+    color: #82B1FF; font-weight: bold;
+}
+
+
+/*Female Box*/
+div#modalGenerateFemale {
+    display: none;
+    box-shadow: 0.6vw 0.6vw 0.5vw 0.1vw #808080;
+    background-color: #FF80AB;
+    height: 20vw; width: 40vw;
+    margin: 10vw 0 0 30vw;
+    
+    -webkit-animation: fadeMeIn 0.1s ease-in;
+    -moz-animation: fadeMeIn 0.1s ease-in;
+    animation: fadeMeIn 0.1s ease-in;
+}
+
+button#generateFemale, button#refreshFemale {
+    color: #FF80AB; font-weight: bold;
+}
+
+/*Male and Female Box Shared Styles*/
+img#maleAvatar, img#femaleAvatar {
+    position: absolute;
+    margin-left: 28vw; margin-top:3vw;
+    height: 12vw; width: 11vw;
+}
+
+button.button1 {
+    position: absolute;
+    margin-left: 3.5vw; margin-top: 16vw;
+    background-color: white;
+    border: none; height: 3vw; width: 13vw;
+    cursor: pointer;
+    font-size: 1vw;
+}
+button.button2 {
+    position: absolute;
+    margin-left: 18vw; margin-top: 16vw;
+    background-color: white;
+    border: none; height: 3vw; width: 13vw;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+div#resultMale, div#resultFemale {
+    position: absolute;
+    color: white;
+    font-size: 1.5vw;
+    margin-left: 4vw; margin-top: 4vw;
+}
+
+
+
