@@ -139,6 +139,12 @@ body{
 	margin-top: 460px;
 }
 
+@media only screen and (min-width: 1600px) and (min-height: 900px){
+	#intro{
+		margin-top: 480px;
+	}
+}
+
 .introtext {
 	font-size: 18px; font-family: 'Custom';
 	text-align: center;
@@ -146,3 +152,5 @@ body{
 	color: rgb(100,100,100);
 	margin-bottom: 5px;
 }
+
+
