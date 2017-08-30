@@ -17,6 +17,13 @@ body{
 	font-family: 'Custom'; 
 }
 
+/*DISPLAY WRAPPER*/
+
+#displaydiv{
+	height: 100%; width: 100%;
+	overflow: auto;
+}
+
 /*****************HEADER*************/
 #headerdiv{
 	width: 100%;
@@ -59,7 +66,7 @@ body{
 	position: absolute; z-index: 0;
 	
 	width: 100%;
-	height: 250px;
+	height: 350px;
 	
 	background-color: rgba(146,146,146, 0.5);
 	
@@ -70,7 +77,7 @@ body{
 	position: absolute; z-index: 1;
 	
 	width: 100%;
-	height: 250px;
+	height: 350px;
 	
 	background-color: rgba(146,146,146, 0.5);
 	
@@ -98,4 +105,44 @@ body{
 #cover{
 	margin-top: -50px;
 	width: 100%;
+}
+
+#ramcediv{
+	position: absolute; z-index: 1;
+	left: 0; right: 0;
+	margin-top: 210px; margin-left: auto; margin-right: auto; margin-bottom: 0;
+	
+	height: 230px;
+	width: 230px;
+	overflow: hidden;
+	
+	border: 4px solid white;
+	/* box-shadow: 0px 0px 6px gray; */
+}
+
+#ramcefilter{
+	position: absolute; z-index: 1;
+	height: 100%; width: 100%;
+	background-color: rgba(146,146,146, 0);
+}
+
+#ramce{
+	position: absolute; z-index: 0;
+	height: 230px; width: 230px;
+}
+
+/****ABOUT***/
+
+#intro{
+	position: absolute; z-index: 0;
+	height: 60px; width: 100%;
+	margin-top: 460px;
+}
+
+.introtext {
+	font-size: 18px; font-family: 'Custom';
+	text-align: center;
+	
+	color: rgb(100,100,100);
+	margin-bottom: 5px;
 }
