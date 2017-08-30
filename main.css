@@ -44,7 +44,7 @@ body{
 }
 
 .hoptions{
-	height: 46px;
+	height: 48px;
 	width: 140px;
 	display: inline-block;
 	
@@ -59,11 +59,11 @@ body{
 }
 
 .hoptions:hover{
-	/* border-bottom: 4px solid #929292; */
+	border-bottom: 2px solid rgba(255,255,255,0.5);
 }
 
 #ho_home{
-	/* border-bottom: 4px solid #929292; */
+	border-bottom: 2px solid rgba(255,255,255,0.5);
 }
 
 /*****************SUBHEADER/COVER*************/

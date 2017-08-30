@@ -17,7 +17,7 @@
 }
 
 .hoptions{
-	height: 46px;
+	height: 48px;
 	width: 80px;
 	display: inline-block;
 	
@@ -29,6 +29,14 @@
 	
 	border-bottom: 4px solid rgba(0,0,0,0);
 	cursor: pointer;
+}
+
+.hoptions:hover{
+	border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+#ho_home{
+	border-bottom: 2px solid rgba(255,255,255,0.5);
 }
 
 /*****************SUBHEADER/COVER*************/
