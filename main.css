@@ -55,7 +55,9 @@ body{
 	line-height: 50px;
 	
 	border-bottom: 4px solid rgba(0,0,0,0);
-		cursor: pointer;
+	cursor: pointer;
+	
+	user-select: none;
 }
 
 .hoptions:hover{
