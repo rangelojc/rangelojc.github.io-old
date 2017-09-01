@@ -50,20 +50,32 @@
 		
 		<div id="sociallabel">CONTACT ME</div>
 		<div id="social">
-			<div class="socialimg" id="sfb" onclick="openURL('https://www.facebook.com/ramuzuconcepcion')">
-				<img src="resources/facebook.png"/>
+			<div class="socialimg" id="sfb"
+			onclick="openURL('https://www.facebook.com/ramuzuconcepcion')"
+			onmouseover="hoverSocial(this, 'fb')"
+			onmouseleave="unhoverSocial(this, 'fb')">
+				<img src="resources/facebook2.png"/>
 			</div>
 			
-			<div class="socialimg" id="stw" onclick="openURL('https://www.twitter.com/ramceconcepcion')">
-				<img src="resources/twitter.png"/>
+			<div class="socialimg" id="stw"
+			onclick="openURL('https://www.twitter.com/ramceconcepcion')"
+			onmouseover="hoverSocial(this, 'tw')"
+			onmouseleave="unhoverSocial(this, 'tw')">
+				<img src="resources/twitter2.png"/>
 			</div>
 			
-			<div class="socialimg" id="sgo" href="mailto:ramuzuconcepcion@gmail.com?Subject=Write your subject to Ramce Concepcion." target="_top">
-				<img src="resources/google.png"/>
+			<div class="socialimg" id="sgo"
+			href="mailto:ramuzuconcepcion@gmail.com?Subject=Write your subject to Ramce Concepcion." target="_top"
+			onmouseover="hoverSocial(this, 'gg')"
+			onmouseleave="unhoverSocial(this, 'gg')">
+				<img src="resources/google2.png"/>
 			</div>
 			
-			<div class="socialimg" id="sig" onclick="openURL('https://www.instagram.com/ramceangelo_/')">
-				<img src="resources/instagram.png"/>
+			<div class="socialimg" id="sig"
+			onclick="openURL('https://www.instagram.com/ramceangelo_/')"
+			onmouseover="hoverSocial(this, 'ig')"
+			onmouseleave="unhoverSocial(this, 'ig')">
+				<img src="resources/instagram2.png"/>
 			</div>
 			
 		</div>
@@ -77,12 +89,6 @@
 
 </body>
 
-<script>
-function openURL(url) {
-  var win = window.open(url, '_blank');
-  win.focus();
-}
-</script>
-<!--script src="nav.js"></script-->
+<script src="nav.js"></script>
 
 </html>
