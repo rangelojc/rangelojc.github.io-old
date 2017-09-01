@@ -98,6 +98,8 @@ body{
 	
 	height: 50px;
 	width: 100%;
+	
+	user-select: none;
 }
 
 #sht_ramce{
@@ -143,13 +145,13 @@ body{
 
 #intro{
 	position: absolute; z-index: 0;
-	height: 60px; width: 100%;
+	height: auto; width: 100%;
 	margin-top: 490px;
 }
 
 @media only screen and (min-width: 1600px) and (min-height: 900px){
 	#intro{
-		margin-top: 510px;
+		margin-top: 540px;
 	}
 }
 
@@ -159,6 +161,49 @@ body{
 	
 	color: rgb(100,100,100);
 	margin-bottom: 5px;
+	
+	user-select: none;
 }
 
+/***SOCIAL MEDIA***/
+
+#sociallabel{
+	position: absolute; z-index: 0;
+	height: auto; width: 100%;
+	margin-top: 620px;
+	
+	font-size: 22px; font-family: 'Custom';
+	text-align: center; color: rgb(100,100,100);
+	
+	display: none;
+}
+
+#social{		
+	position: absolute; z-index: 0;
+	height: auto; width: 100%;
+	margin-top: 650px;
+	
+	margin-left: auto; margin-right: auto;
+	left: 0; right: 0;
+	
+	text-align: center;
+}
+
+@media only screen and (min-width: 1600px) and (min-height: 900px){
+	#social{
+		margin-top: 740px;
+	}
+}
+
+.socialimg {
+	display: inline-block;
+	height: 80px; width: 80px;
+	
+	cursor: pointer;
+	margin-left: 20px; margin-right: 20px;
+}
+
+.socialimg img{
+	height: 100%;
+}
 

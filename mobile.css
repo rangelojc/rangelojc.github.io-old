@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 780px){
 	
 /*****************HEADER*************/
 #headerdiv{
@@ -89,6 +89,13 @@
 	width: 150%;
 }
 
+@media only screen and (max-width: 350px){
+	#cover{
+		margin-top: -50px;
+		width: 200%;
+	}
+}
+
 #ramcediv{
 	position: absolute; z-index: 1;
 	left: 0; right: 0;
@@ -132,6 +139,16 @@
 	margin-bottom: 5px;
 }
 
+#social{
+	margin-top: 570px;
+}
 
+.socialimg {
+	display: inline-block;
+	height: 50px; width: 50px;
+	
+	cursor: pointer;
+	margin-left: 0px; margin-right: 0px;
+}
 
 }
