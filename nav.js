@@ -24,7 +24,7 @@ sfb.onmouseover = function(){ hoverSocial(this, 'fb'); };
 sfb.onmouseleave = function(){ unhoverSocial(this, 'fb'); };
 sfb.onmouseup = function(){ unhoverSocial(this, 'fb'); };
 	
-stw.onclick = function(){ openURL('https://www.twitter.com/ramceconcepcion'); };
+stw.onclick = function(){ openURL('https://www.twitter.com/ramceangelo'); };
 stw.onmouseover = function(){ hoverSocial(this, 'tw'); };
 stw.onmouseleave = function(){ unhoverSocial(this, 'tw'); };
 stw.onmouseup = function(){ unhoverSocial(this, 'tw'); };
@@ -40,4 +40,6 @@ sig.onmouseover = function(){ hoverSocial(this, 'ig'); };
 sig.onmouseleave = function(){ unhoverSocial(this, 'ig'); };
 sig.onmouseup = function(){ unhoverSocial(this, 'ig'); };
 
+ho_about.onclick = function(){ alert('Sorry! This page is still under construction!'); };
+ho_portfolio.onclick = function(){ alert('Sorry! This page is still under construction!'); };
 });
