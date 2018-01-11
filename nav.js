@@ -19,7 +19,7 @@ function unhoverSocial(el, type){
 
 window.addEventListener('load', function(){
 
-sfb.onclick = function(){ openURL('https://www.facebook.com/ramuzuconcepcion'); };
+sfb.onclick = function(){ openURL('https://www.facebook.com/ramceconcepcion'); };
 sfb.onmouseover = function(){ hoverSocial(this, 'fb'); };
 sfb.onmouseleave = function(){ unhoverSocial(this, 'fb'); };
 sfb.onmouseup = function(){ unhoverSocial(this, 'fb'); };
@@ -29,11 +29,11 @@ stw.onmouseover = function(){ hoverSocial(this, 'tw'); };
 stw.onmouseleave = function(){ unhoverSocial(this, 'tw'); };
 stw.onmouseup = function(){ unhoverSocial(this, 'tw'); };
 
-sgo.setAttribute('href', "mailto:ramuzuconcepcion@gmail.com?Subject=Write your subject to Ramce Concepcion.");
-sgo.setAttribute('target', "_top");
-sgo.onmouseover = function(){ hoverSocial(this, 'gg'); };
-sgo.onmouseleave = function(){ unhoverSocial(this, 'gg'); };
-sgo.onmouseup = function(){ unhoverSocial(this, 'gg'); };
+// sgo.setAttribute('href', "mailto:ramuzuconcepcion@gmail.com?Subject=Write your subject to Ramce Concepcion.");
+// sgo.setAttribute('target', "_top");
+// sgo.onmouseover = function(){ hoverSocial(this, 'gg'); };
+// sgo.onmouseleave = function(){ unhoverSocial(this, 'gg'); };
+// sgo.onmouseup = function(){ unhoverSocial(this, 'gg'); };
 
 sig.onclick =  function(){ openURL('https://www.instagram.com/ramceangelo_/'); };
 sig.onmouseover = function(){ hoverSocial(this, 'ig'); };

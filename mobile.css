@@ -19,7 +19,7 @@
 .hoptions{
 	height: 48px;
 	width: 80px;
-	display: inline-block;
+	display: none;
 	
 	font-size: 13px;
 	color: white;
