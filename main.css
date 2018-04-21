@@ -33,7 +33,7 @@ body{
 .hoptions{
 	height: 48px;
 	width: 140px;
-	display: inline-block;
+	display: none;
 	
 	font-size: 16px;
 	color: white;
