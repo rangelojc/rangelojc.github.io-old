@@ -10,6 +10,10 @@ function hoverSocial(el, action) {
 	}
 }
 
+function showEmail(){
+	alert('Email me at ramuzuconcepcion@gmail.com');
+}
+
 window.addEventListener('load', function () {
 
 	sfb.onclick = function () { openURL('https://www.facebook.com/ramceconcepcion'); };
@@ -22,11 +26,11 @@ window.addEventListener('load', function () {
 	stw.onmouseleave = function () { hoverSocial(this,  false); };
 	stw.onmouseup = function () { hoverSocial(this,  false); };
 
-	// sgo.setAttribute('href', "mailto:ramuzuconcepcion@gmail.com?Subject=Write your subject to Ramce Concepcion.");
-	// sgo.setAttribute('target', "_top");
-	// sgo.onmouseover = function(){ hoverSocial(this, 'gg'); };
-	// sgo.onmouseleave = function(){ hoverSocial(this, 'gg'); };
-	// sgo.onmouseup = function(){ hoverSocial(this, 'gg'); };
+
+	sgo.onclick = function(){ showEmail(); }
+	sgo.onmouseover = function () { hoverSocial(this, true); };
+	sgo.onmouseleave = function () { hoverSocial(this,  false); };
+	sgo.onmouseup = function () { hoverSocial(this,  false); };
 
 	sig.onclick = function () { openURL('https://www.instagram.com/ramceangelo_/'); };
 	sig.onmouseover = function () { hoverSocial(this, true); };
