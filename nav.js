@@ -1,45 +1,42 @@
-function openURL(url){
-  var win = window.open(url, '_blank');
-  win.focus();
+function openURL(url) {
+	var win = window.open(url, '_blank');
+	win.focus();
 }
 
-function hoverSocial(el, type){
-	if(type == "fb") el.children[0].setAttribute("src", "resources/facebook.png");
-	if(type == "tw") el.children[0].setAttribute("src", "resources/twitter.png");
-	if(type == "gg") el.children[0].setAttribute("src", "resources/google.png");
-	if(type == "ig") el.children[0].setAttribute("src", "resources/instagram.png");
+function hoverSocial(el, action) {
+	switch (action) {
+		case true:
+			el.style.opacity = 1;
+			break;
+		case false:
+			el.style.opacity = 0.7;
+			break;
+	}
 }
 
-function unhoverSocial(el, type){
-	if(type == "fb") el.children[0].setAttribute("src", "resources/facebook2.png");
-	if(type == "tw") el.children[0].setAttribute("src", "resources/twitter2.png");
-	if(type == "gg") el.children[0].setAttribute("src", "resources/google2.png");
-	if(type == "ig") el.children[0].setAttribute("src", "resources/instagram2.png");
-}
+window.addEventListener('load', function () {
 
-window.addEventListener('load', function(){
+	sfb.onclick = function () { openURL('https://www.facebook.com/ramceconcepcion'); };
+	sfb.onmouseover = function () { hoverSocial(this, true); };
+	sfb.onmouseleave = function () { hoverSocial(this, false); };
+	sfb.onmouseup = function () { hoverSocial(this, false); };
 
-sfb.onclick = function(){ openURL('https://www.facebook.com/ramceconcepcion'); };
-sfb.onmouseover = function(){ hoverSocial(this, 'fb'); };
-sfb.onmouseleave = function(){ unhoverSocial(this, 'fb'); };
-sfb.onmouseup = function(){ unhoverSocial(this, 'fb'); };
-	
-stw.onclick = function(){ openURL('https://www.twitter.com/ramceangelo'); };
-stw.onmouseover = function(){ hoverSocial(this, 'tw'); };
-stw.onmouseleave = function(){ unhoverSocial(this, 'tw'); };
-stw.onmouseup = function(){ unhoverSocial(this, 'tw'); };
+	stw.onclick = function () { openURL('https://www.twitter.com/ramceangelo'); };
+	stw.onmouseover = function () { hoverSocial(this, true); };
+	stw.onmouseleave = function () { hoverSocial(this,  false); };
+	stw.onmouseup = function () { hoverSocial(this,  false); };
 
-// sgo.setAttribute('href', "mailto:ramuzuconcepcion@gmail.com?Subject=Write your subject to Ramce Concepcion.");
-// sgo.setAttribute('target', "_top");
-// sgo.onmouseover = function(){ hoverSocial(this, 'gg'); };
-// sgo.onmouseleave = function(){ unhoverSocial(this, 'gg'); };
-// sgo.onmouseup = function(){ unhoverSocial(this, 'gg'); };
+	// sgo.setAttribute('href', "mailto:ramuzuconcepcion@gmail.com?Subject=Write your subject to Ramce Concepcion.");
+	// sgo.setAttribute('target', "_top");
+	// sgo.onmouseover = function(){ hoverSocial(this, 'gg'); };
+	// sgo.onmouseleave = function(){ hoverSocial(this, 'gg'); };
+	// sgo.onmouseup = function(){ hoverSocial(this, 'gg'); };
 
-sig.onclick =  function(){ openURL('https://www.instagram.com/ramceangelo_/'); };
-sig.onmouseover = function(){ hoverSocial(this, 'ig'); };
-sig.onmouseleave = function(){ unhoverSocial(this, 'ig'); };
-sig.onmouseup = function(){ unhoverSocial(this, 'ig'); };
+	sig.onclick = function () { openURL('https://www.instagram.com/ramceangelo_/'); };
+	sig.onmouseover = function () { hoverSocial(this, true); };
+	sig.onmouseleave = function () { hoverSocial(this, false); };
+	sig.onmouseup = function () { hoverSocial(this, false); };
 
-ho_about.onclick = function(){ alert('Sorry! This page is still under construction!'); };
-ho_portfolio.onclick = function(){ alert('Sorry! This page is still under construction!'); };
+	// ho_about.onclick = function () { alert('Sorry! This page is still under construction!'); };
+	// ho_portfolio.onclick = function () { alert('Sorry! This page is still under construction!'); };
 });
