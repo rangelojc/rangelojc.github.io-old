@@ -184,6 +184,7 @@ body{
 
 .socialimg {
 	display: inline-block;
+	vertical-align: middle;
 	height: 80px; width: 80px;
 	
 	cursor: pointer;
