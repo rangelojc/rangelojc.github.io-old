@@ -3,39 +3,41 @@ function openURL(url) {
 	win.focus();
 }
 
-function hoverSocial(el, action) {
+function hoverSocial(el, action, evt) {
 	switch (action) {
 		case true: el.style.opacity = 1; break;
 		case false: el.style.opacity = 0.8; break;
 	}
+
+	evt.preventDefault();
 }
 
-function showEmail(){
+function showEmail() {
 	alert('Email me at ramuzuconcepcion@gmail.com');
 }
 
 window.addEventListener('load', function () {
 
 	sfb.onclick = function () { openURL('https://www.facebook.com/ramceconcepcion'); };
-	sfb.onmouseover = function () { hoverSocial(this, true); };
-	sfb.onmouseleave = function () { hoverSocial(this, false); };
-	sfb.onmouseup = function () { hoverSocial(this, false); };
+	sfb.onmouseover = function () { hoverSocial(this, true, evt); };
+	sfb.onmouseleave = function () { hoverSocial(this, false, evt); };
+	sfb.onmouseup = function () { hoverSocial(this, false, evt); };
 
 	stw.onclick = function () { openURL('https://www.twitter.com/ramceangelo'); };
-	stw.onmouseover = function () { hoverSocial(this, true); };
-	stw.onmouseleave = function () { hoverSocial(this,  false); };
-	stw.onmouseup = function () { hoverSocial(this,  false); };
+	stw.onmouseover = function (evt) { hoverSocial(this, true, evt); };
+	stw.onmouseleave = function (evt) { hoverSocial(this, false, evt); };
+	stw.onmouseup = function (evt) { hoverSocial(this, false, evt); };
 
 
-	sgo.onclick = function(){ showEmail(); }
-	sgo.onmouseover = function () { hoverSocial(this, true); };
-	sgo.onmouseleave = function () { hoverSocial(this,  false); };
-	sgo.onmouseup = function () { hoverSocial(this,  false); };
+	sgo.onclick = function () { showEmail(); }
+	sgo.onmouseover = function (evt) { hoverSocial(this, true, evt); };
+	sgo.onmouseleave = function (evt) { hoverSocial(this, false, evt); };
+	sgo.onmouseup = function (evt) { hoverSocial(this, false, evt); };
 
 	sig.onclick = function () { openURL('https://www.instagram.com/ramceangelo_/'); };
-	sig.onmouseover = function () { hoverSocial(this, true); };
-	sig.onmouseleave = function () { hoverSocial(this, false); };
-	sig.onmouseup = function () { hoverSocial(this, false); };
+	sig.onmouseover = function (evt) { hoverSocial(this, true, evt); };
+	sig.onmouseleave = function (evt) { hoverSocial(this, false, evt); };
+	sig.onmouseup = function (evt) { hoverSocial(this, false, evt); };
 
 	// ho_about.onclick = function () { alert('Sorry! This page is still under construction!'); };
 	// ho_portfolio.onclick = function () { alert('Sorry! This page is still under construction!'); };
