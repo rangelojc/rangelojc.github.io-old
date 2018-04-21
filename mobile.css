@@ -83,5 +83,7 @@
 		vertical-align: middle;
 		cursor: pointer;
 		margin: 0 5px;
+
+		opacity: 1;
 	}
 }
