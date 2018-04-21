@@ -5,12 +5,8 @@ function openURL(url) {
 
 function hoverSocial(el, action) {
 	switch (action) {
-		case true:
-			el.style.opacity = 1;
-			break;
-		case false:
-			el.style.opacity = 0.7;
-			break;
+		case true: el.style.opacity = 1; break;
+		case false: el.style.opacity = 0.8; break;
 	}
 }
 
