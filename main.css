@@ -143,7 +143,7 @@ body{
 }
 
 .introtext {
-	font-size: 18px; font-family: 'Custom';
+	font-size: 18px;
 	text-align: center;
 	
 	color: rgb(100,100,100);
@@ -159,7 +159,7 @@ body{
 	height: auto; width: 100%;
 	margin-top: 620px;
 	
-	font-size: 22px; font-family: 'Custom';
+	font-size: 22px;
 	text-align: center; color: rgb(100,100,100);
 	
 	display: none;
