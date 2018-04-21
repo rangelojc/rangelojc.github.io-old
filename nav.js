@@ -19,15 +19,14 @@ function showEmail() {
 window.addEventListener('load', function () {
 
 	sfb.onclick = function () { openURL('https://www.facebook.com/ramceconcepcion'); };
-	sfb.onmouseover = function () { hoverSocial(this, true, evt); };
-	sfb.onmouseleave = function () { hoverSocial(this, false, evt); };
-	sfb.onmouseup = function () { hoverSocial(this, false, evt); };
+	sfb.onmouseover = function (evt) { hoverSocial(this, true, evt); };
+	sfb.onmouseleave = function (evt) { hoverSocial(this, false, evt); };
+	sfb.onmouseup = function (evt) { hoverSocial(this, false, evt); };
 
 	stw.onclick = function () { openURL('https://www.twitter.com/ramceangelo'); };
 	stw.onmouseover = function (evt) { hoverSocial(this, true, evt); };
 	stw.onmouseleave = function (evt) { hoverSocial(this, false, evt); };
 	stw.onmouseup = function (evt) { hoverSocial(this, false, evt); };
-
 
 	sgo.onclick = function () { showEmail(); }
 	sgo.onmouseover = function (evt) { hoverSocial(this, true, evt); };
