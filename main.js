@@ -1,7 +1,7 @@
 function SocialMedia() {
 	const component = {}
 
-	component.openURL = function () {
+	component.openURL = function (url) {
 		const win = window.open(url, '_blank');
 		win.focus();
 	}
