@@ -63,7 +63,7 @@ function HomePage() {
 	}
 
 	component.setEvents = function(){
-		resume.onclick = function(){ component.download("files/resume.docx"); }
+		resume.onclick = function(){ component.download("files/resume.pdf"); }
 	}
 
 	return component;
