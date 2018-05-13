@@ -47,7 +47,7 @@ function SocialMedia() {
 function HomePage() {
 	const component = {};
 
-	component.applyParallax = function() {
+	component.applyParallax = function () {
 		if (window.scrollY === undefined || window.scrollY === null) return;
 
 		window.addEventListener('scroll', function () {
@@ -58,25 +58,30 @@ function HomePage() {
 		})
 	}
 
-	component.download = function(url){
+	component.download = function (url) {
 		window.location.href = url;
 	}
 
-	component.setEvents = function(){
-		resume.onclick = function(){ component.download("files/resume.pdf"); }
+	component.open = function(url){
+		const win = window.open(url, '_blank');
+		win.focus();
+	}
+
+	component.setEvents = function () {
+		resume.onclick = function () { component.open("files/resume.pdf"); }
 	}
 
 	return component;
 }
 
-function Footer(){
+function Footer() {
 	const footer = {};
 
 	footer.setDate = function () {
 		let year = new Date().getFullYear();
 		copyright_date.innerHTML = "Ramce Concepcion &copy; " + year;
 	}
-	
+
 	return footer;
 }
 
