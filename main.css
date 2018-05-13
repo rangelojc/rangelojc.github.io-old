@@ -100,7 +100,7 @@ body{
 	width: 100%;
 	height: 600px;
 	
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.6);
 	
 	overflow: hidden;
 }
@@ -124,6 +124,29 @@ body{
 	font-size: 14px;
 	font-weight: lighter;
 }
+
+#resume_wrapper{
+	width: 100%; height: auto;
+	text-align: center;
+}
+
+#resume{
+	border: 2px solid #fff;
+	background-color: transparent;
+	color: #fff;
+	font-size: 16px;
+
+	height: 50px; width: 200px;
+
+	text-align: center;
+	cursor: pointer;
+}
+
+#resume:hover{
+	background-color: rgba(255,255,255,0.5);
+}
+
+
 
 /****ABOUT***/
 
@@ -156,36 +179,6 @@ body{
 	text-align: center; color: rgb(100,100,100);
 	
 	display: none;
-}
-
-#social{		
-	position: absolute; z-index: 0;
-	top: 480px;
-	height: auto; width: 100%;	
-
-	left: 0; right: 0;
-	
-	text-align: center;
-
-	z-index: 999999;
-}
-
-.socialimg {
-	display: inline-block;
-	vertical-align: middle;
-	height: 40px; width: 40px;
-	
-	cursor: pointer;
-	margin: 0 5px 0 5px;
-
-	opacity: 0.8;
-
-	transition: 200ms ease;
-	-webkit-transition: 200ms ease;
-}
-
-.socialimg img{
-	height: 100%;
 }
 
 @media only screen and (max-width: 780px) {
@@ -242,20 +235,11 @@ body{
 
 	#intro {
 		width: 90%;
-		margin: 25px;
 	}
 
 	.introtext {
 		font-size: 14px;
 		margin-bottom: 5px;
-	}
-
-	#social{
-		top: 320px;
-	}
-
-	.socialimg {
-		margin: 0px;
 	}
 }
 
@@ -264,4 +248,24 @@ body{
 		margin-top: -50px;
 		width: 200%;
 	}
+}
+
+/*WEBKIT SCROLLBARS ONLY*/
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+    margin-left: 4px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #404040; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #404040;
+    color: rgba(131, 160, 226, 0.80);
 }

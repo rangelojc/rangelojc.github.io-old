@@ -31,10 +31,10 @@ function SocialMedia() {
 		stw.onmouseleave = function (evt) { component.hover(this, false, evt); };
 		stw.onmouseup = function (evt) { component.hover(this, false, evt); };
 
-		sgo.onclick = function () { showEmail(); }
-		sgo.onmouseover = function (evt) { component.hover(this, true, evt); };
-		sgo.onmouseleave = function (evt) { component.hover(this, false, evt); };
-		sgo.onmouseup = function (evt) { component.hover(this, false, evt); };
+		// sgo.onclick = function () { showEmail(); }
+		// sgo.onmouseover = function (evt) { component.hover(this, true, evt); };
+		// sgo.onmouseleave = function (evt) { component.hover(this, false, evt); };
+		// sgo.onmouseup = function (evt) { component.hover(this, false, evt); };
 
 		sig.onclick = function () { component.openURL('https://www.instagram.com/ramceangelo_/'); };
 		sig.onmouseover = function (evt) { component.hover(this, true, evt); };
@@ -58,7 +58,26 @@ function HomePage() {
 		})
 	}
 
+	component.download = function(url){
+		window.location.href = url;
+	}
+
+	component.setEvents = function(){
+		resume.onclick = function(){ component.download("files/resume.docx"); }
+	}
+
 	return component;
+}
+
+function Footer(){
+	const footer = {};
+
+	footer.setDate = function () {
+		let year = new Date().getFullYear();
+		copyright_date.innerHTML = "Ramce Concepcion &copy; " + year;
+	}
+	
+	return footer;
 }
 
 window.onload = function () {
@@ -67,4 +86,8 @@ window.onload = function () {
 
 	const home = new HomePage();
 	home.applyParallax();
+	home.setEvents();
+
+	const footer = new Footer()
+	footer.setDate();
 };
