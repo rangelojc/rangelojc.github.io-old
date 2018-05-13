@@ -48,12 +48,12 @@ function HomePage() {
 	const component = {};
 
 	component.applyParallax = function() {
-		if (!window.scrollY) return;
+		if (window.scrollY === undefined || window.scrollY === null) return;
 
 		window.addEventListener('scroll', function () {
 			const sliderW = coverdiv.getBoundingClientRect().width;
 
-			if (sliderW < 1000) cover.style.marginTop = 0;
+			if (sliderW < 900) cover.style.marginTop = 0;
 			else cover.style.marginTop = (window.scrollY * -0.3) + "px";
 		})
 	}
