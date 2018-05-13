@@ -100,7 +100,7 @@ body{
 	width: 100%;
 	height: 600px;
 	
-	background-color: rgba(146,146,146, 0.5);
+	background-color: rgba(0,0,0,0.7);
 	
 	overflow: hidden;
 }
@@ -129,14 +129,10 @@ body{
 
 #intro{
 	/* position: absolute; z-index: 0; */
-	height: auto; width: 100%;
-	margin-top: 50px;
-}
-
-@media only screen and (min-width: 1600px) and (min-height: 900px){
-	#intro{
-		margin-top: 540px;
-	}
+	height: auto;
+	width: 100%;
+	margin: 50px auto 0 auto;
+	text-align: center;
 }
 
 .introtext {
@@ -164,8 +160,8 @@ body{
 
 #social{		
 	position: absolute; z-index: 0;
+	top: 480px;
 	height: auto; width: 100%;	
-	margin: 420px auto 0 auto;
 
 	left: 0; right: 0;
 	
@@ -193,11 +189,9 @@ body{
 }
 
 @media only screen and (max-width: 780px) {
-	/*****************HEADER*************/
 	#headerdiv {
 		width: 100%;
 		height: 50px;
-		/*border-bottom: 1px solid rgba(255,255,255,0.5);*/
 	}
 	#hoptionswrapper {
 		height: 100%;
@@ -210,7 +204,7 @@ body{
 		font-size: 13px;
 		line-height: 50px;
 	}
-	/*****************SUBHEADER/COVER*************/
+
 	#subheaderdiv {
 		width: 100%;
 		height: 400px;
@@ -236,31 +230,19 @@ body{
 		height: 100%;
 		width: auto;
 	}
-	@media only screen and (max-width: 350px) {
-		#cover {
-			margin-top: -50px;
-			width: 200%;
-		}
-	}
 	#ramcediv {
 		margin: 30px auto 0 auto;
 		height: 180px;
 		width: 180px;
 	}
 	#ramce {
-		position: absolute;
-		z-index: 0;
 		height: 180px;
 		width: 180px;
 	}
 
-	/****ABOUT***/
 	#intro {
-		height: 60px;
 		width: 90%;
-		margin: 420px auto 0 auto;
-		left: 0;
-		right: 0;
+		margin: 25px;
 	}
 
 	.introtext {
@@ -268,16 +250,18 @@ body{
 		margin-bottom: 5px;
 	}
 
-	#social {
-		margin-top: 320px;
+	#social{
+		top: 320px;
 	}
 
 	.socialimg {
-		display: inline-block;
-		vertical-align: middle;
-		cursor: pointer;
 		margin: 0px;
+	}
+}
 
-		opacity: 0.9;
+@media only screen and (max-width: 350px) {
+	#cover {
+		margin-top: -50px;
+		width: 200%;
 	}
 }

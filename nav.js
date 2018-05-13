@@ -6,7 +6,7 @@ function SocialMedia() {
 		win.focus();
 	}
 
-	component.hover = function () {
+	component.hover = function (el, action, evt) {
 		switch (action) {
 			case true: el.style.opacity = 1; break;
 			case false: el.style.opacity = 0.8; break;
@@ -22,24 +22,24 @@ function SocialMedia() {
 
 	component.setEvents = function () {
 		sfb.onclick = function () { component.openURL('https://www.facebook.com/ramceconcepcion'); };
-		sfb.onmouseover = function (evt) { component.hoverSocial(this, true, evt); };
-		sfb.onmouseleave = function (evt) { component.hoverSocial(this, false, evt); };
-		sfb.onmouseup = function (evt) { component.hoverSocial(this, false, evt); };
+		sfb.onmouseover = function (evt) { component.hover(this, true, evt); };
+		sfb.onmouseleave = function (evt) { component.hover(this, false, evt); };
+		sfb.onmouseup = function (evt) { component.hover(this, false, evt); };
 
 		stw.onclick = function () { component.openURL('https://www.twitter.com/ramceangelo'); };
-		stw.onmouseover = function (evt) { component.hoverSocial(this, true, evt); };
-		stw.onmouseleave = function (evt) { component.hoverSocial(this, false, evt); };
-		stw.onmouseup = function (evt) { component.hoverSocial(this, false, evt); };
+		stw.onmouseover = function (evt) { component.hover(this, true, evt); };
+		stw.onmouseleave = function (evt) { component.hover(this, false, evt); };
+		stw.onmouseup = function (evt) { component.hover(this, false, evt); };
 
 		sgo.onclick = function () { showEmail(); }
-		sgo.onmouseover = function (evt) { component.hoverSocial(this, true, evt); };
-		sgo.onmouseleave = function (evt) { component.hoverSocial(this, false, evt); };
-		sgo.onmouseup = function (evt) { component.hoverSocial(this, false, evt); };
+		sgo.onmouseover = function (evt) { component.hover(this, true, evt); };
+		sgo.onmouseleave = function (evt) { component.hover(this, false, evt); };
+		sgo.onmouseup = function (evt) { component.hover(this, false, evt); };
 
 		sig.onclick = function () { component.openURL('https://www.instagram.com/ramceangelo_/'); };
-		sig.onmouseover = function (evt) { component.hoverSocial(this, true, evt); };
-		sig.onmouseleave = function (evt) { component.hoverSocial(this, false, evt); };
-		sig.onmouseup = function (evt) { component.hoverSocial(this, false, evt); };
+		sig.onmouseover = function (evt) { component.hover(this, true, evt); };
+		sig.onmouseleave = function (evt) { component.hover(this, false, evt); };
+		sig.onmouseup = function (evt) { component.hover(this, false, evt); };
 	}
 	return component;
 }
