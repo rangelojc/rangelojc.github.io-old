@@ -89,8 +89,6 @@ function LazyLoader() {
 	const imgs = document.querySelectorAll('img[data-src]');
 
 	for (let i = 0, len = imgs.length; i < len; i++) {
-		if (imgs[i].classList.contains("sliderimg")) continue;
-
 		imgs[i].setAttribute('src', imgs[i].getAttribute('data-src'));
 		imgs[i].onload = function () {
 			this.removeAttribute('data-src');
