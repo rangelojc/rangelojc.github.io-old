@@ -62,7 +62,7 @@ function HomePage() {
 		window.location.href = url;
 	}
 
-	component.open = function(url){
+	component.open = function (url) {
 		const win = window.open(url, '_blank');
 		win.focus();
 	}
@@ -85,6 +85,19 @@ function Footer() {
 	return footer;
 }
 
+function LazyLoader() {
+	const imgs = document.querySelectorAll('img[data-src]');
+
+	for (let i = 0, len = imgs.length; i < len; i++) {
+		if (imgs[i].classList.contains("sliderimg")) continue;
+
+		imgs[i].setAttribute('src', imgs[i].getAttribute('data-src'));
+		imgs[i].onload = function () {
+			this.removeAttribute('data-src');
+		};
+	}
+}
+
 window.onload = function () {
 	const social = new SocialMedia();
 	social.setEvents();
@@ -95,4 +108,6 @@ window.onload = function () {
 
 	const footer = new Footer()
 	footer.setDate();
+
+	LazyLoader();
 };

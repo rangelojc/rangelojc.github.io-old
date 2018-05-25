@@ -64,6 +64,10 @@ body{
 
 #cover{
 	width: 100%;
+
+	transition: 500ms ease;
+	-webkit-transition: 500ms ease;
+	-ms-transition: 500ms ease;
 }
 
 #ramcediv{
@@ -89,6 +93,10 @@ body{
 #ramce{
 	position: absolute; z-index: 0;
 	height: 100%; width: 100%;
+
+	transition: 500ms ease;
+	-webkit-transition: 500ms ease;
+	-ms-transition: 500ms ease;
 }
 
 #subheaderdiv{
