@@ -4,6 +4,15 @@ body{
 	user-select: none;
 }
 
+@keyframes fade{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
 #displaydiv{
 	height: 100%; width: 100%;
 	overflow: auto;
@@ -65,9 +74,9 @@ body{
 #cover{
 	width: 100%;
 
-	transition: 500ms ease;
-	-webkit-transition: 500ms ease;
-	-ms-transition: 500ms ease;
+	animation: fade 500ms ease;
+	-webkit-animation:fade 500ms ease;
+	-ms-animation: fade 500ms ease;
 }
 
 #ramcediv{
@@ -94,9 +103,9 @@ body{
 	position: absolute; z-index: 0;
 	height: 100%; width: 100%;
 
-	transition: 500ms ease;
-	-webkit-transition: 500ms ease;
-	-ms-transition: 500ms ease;
+	animation: fade 500ms ease;
+	-webkit-animation:fade 500ms ease;
+	-ms-animation: fade 500ms ease;
 }
 
 #subheaderdiv{

@@ -55,7 +55,7 @@ function HomePage() {
 
 			if (sliderW < 900) cover.style.marginTop = 0;
 			else cover.style.marginTop = (window.scrollY * -0.3) + "px";
-		})
+		});
 	}
 
 	component.download = function (url) {
