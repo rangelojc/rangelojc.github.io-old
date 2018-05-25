@@ -60,10 +60,9 @@ body{
 
 .lazy{
 	opacity: 1;
-	transition: 300ms ease;
-
-	-webkit-transition: 300ms ease;
-	-ms-transition: 300ms ease;
+	transition: opacity 300ms ease;
+	-webkit-transition: opacity 300ms ease;
+	-ms-transition: opacity 300ms ease;
 }
 
 #coverdiv{	
