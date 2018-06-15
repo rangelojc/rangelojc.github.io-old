@@ -30,7 +30,7 @@
 
 	<div id="displaydiv">
 		<div id="homediv">
-			<div id="coverdiv" themify="header-bg">
+			<div id="coverdiv">
 				<img data-src="resources/cover.jpg" id="cover" class="lazy" />
 			</div>
 
@@ -44,7 +44,7 @@
 				<div class="subheadertext" id="sht_ramce2">SOFTWARE ENGINEER | WEB DEVELOPER</div>
 
 				<div id="resume_wrapper">
-					<button id="resume" themify="resume-bg,text-title">VIEW RESUME</button>
+					<button id="resume">VIEW RESUME</button>
 				</div>
 			</div>
 
@@ -54,8 +54,8 @@
 				<div id="int_content3" class="introtext">A gamer, pc hobbyist and food freak by nature.</div>
 			</div>
 
-			<div id="content1">
-				<div class="content-title" themify="text-title">ABOUT ME</div>
+			<div id="aboutme">
+				<div class="content-title">ABOUT ME</div>
 				<div class="content-body">
 					<p>
 						I was born and raised in the province of Rizal, Philippines -- a thriving region east of Metro Manila and just above the
@@ -64,73 +64,79 @@
 						do, I work for a software company here as a software engineer.
 					</p>
 					<p>
-						I usually do the front-end side of the job, writing JavaScript for web applications of various nature. I also
-						write JavaScript-based libraries for both fun and work, developing algorithms and UI components in order to make web
-						development clean, professional and exciting. Sometimes I work on the back-end and occassionally design websites, such
-						as this one, although this clearly isn't my best suit.
+						I usually do the front-end side of the job, writing JavaScript for web applications of various nature. I also write JavaScript-based
+						libraries for both fun and work, developing algorithms and UI components in order to make web development clean, professional
+						and exciting. Sometimes I work on the back-end and occassionally design websites, such as this one, although this clearly
+						isn't my best suit.
 					</p>
 				</div>
 			</div>
-			<div id="content2">
-				<div class="content-title" themify="text-title">My Work</div>
-				<br><br>
 
-				<div class="content-title" themify="text-title">Themify</div>
-				<div class="content-body">
-					<p>
-						Themify is a small JavaScript theme library that allows you to dynamically apply specific sets of css properties on your
-						html elements based on JSON templates, thus, giving your web site or web app the capability to have multiple themes.
-						Especially useful when managing color schemes. Try it below:
-					</p>
-				</div>
+			<div id="mywork">
+				<div class="content-title">My Work</div>
 				<br>
-				
-				<div id="themify-buttons">
-					<button themify="border,text-title" id="themifybutton1" class="themify-buttons active">Default</button>
-					<button themify="border,text-title" id="themifybutton2" class="themify-buttons">Calming Sky</button>
-					<button themify="border,text-title" id="themifybutton3" class="themify-buttons">Girly</button>
-					<button themify="border,text-title" id="themifybutton4" class="themify-buttons">Earth</button>
-				</div>
 
-				<br><br>
-				<div class="content-title" themify="text-title">Workr</div>
-				<div class="content-body">
-					<p>
-						Workr is a JavaScript helper library that allows you to use the native Web Worker API more intuitively and creatively. Workr also
-						enables its user to pass function references to a web worker instead of creating separate .js files -- effectively 
-						making any valid method from your codebase run on a separate thread. (Demo not yet available)
-					</p>
-				</div>
+				<div id="myworkcontainer">
+					<div class="work-panel">
+						<div class="content-body subtitle">Themify</div>
+						<div class="content-body">
+							<p>
+								Themify is a small JavaScript theme library that allows you to dynamically apply specific sets of css properties on your
+								html elements based on JSON templates, thus, giving your web site or web app the capability to have multiple themes.
+								Especially useful when managing color schemes. Try it below:
+							</p>
+						</div>
+						<br>
 
-				<br><br>
-				<div class="content-title" themify="text-title">Alertr</div>
-				<div class="content-body">
-					<p>
-						Alertr is a customizable JavaScript alert UI component similar to Windows 10 notifications. You can show stylized
-						notification pop ups anywhere on the screen. (Demo not yet available)
-					</p>
-				</div>
+						<div id="themify-buttons">
+							<button themify="border,primary-text" id="themifybutton1" class="themify-buttons active">Default</button>
+							<button themify="border,primary-text" id="themifybutton2" class="themify-buttons">Sky</button>
+							<button themify="border,primary-text" id="themifybutton3" class="themify-buttons">Girly</button>
+							<button themify="border,primary-text" id="themifybutton4" class="themify-buttons">Mint</button>
+						</div>
+					</div>
 
+					<div class="work-panel">
+						<div class="content-body subtitle">Workr</div>
+						<div class="content-body">
+							<p>
+								Workr is a JavaScript helper library that allows you to use the native Web Worker API more intuitively and creatively. Workr
+								also enables its user to pass function references to a web worker instead of creating separate .js files -- effectively
+								making any valid method from your codebase run on a separate thread. (Demo not yet available)
+							</p>
+						</div>
+					</div>
+
+					<div class="work-panel">
+					<div class="content-body subtitle">Alertr</div>
+					<div class="content-body">
+						<p>
+							Alertr is a customizable JavaScript alert UI component similar to Windows 10 notifications. You can show stylized notification
+							pop ups anywhere on the screen. (Demo not yet available)
+						</p>
+					</div>
+					</div>
+				</div>
 			</div>
+
 		</div>
 
-
-		<div id="footer" themify="footer-bg">
+		<div id="footer">
 			<div id="footer_wrapper">
 				<div class="footer_panel">
-					<div class="footer_title" themify="footer-text1">RAMCE CONCEPCION</div>
-					<div class="footer_text" id="f_about" themify="footer-text2">
+					<div class="footer_title">RAMCE CONCEPCION</div>
+					<div class="footer_text" id="f_about">
 						I strive to deliver high quality products to the best of my capacity. I believe in pursuing and exploring new technologies
 						that may open the doors to new possibilities while living in a balance between work and life.
 					</div>
 				</div>
 				<div class="footer_panel">
-					<div class="footer_title" themify="footer-text1">CONTACT ME</div>
-					<div class="footer_text" id="f_email" themify="footer-text2">Email: ramuzuconcepcion@gmail.com</div>
-					<div class="footer_text" id="f_phone" themify="footer-text2">Phone: (+63) 975-245-6112</div>
+					<div class="footer_title">CONTACT ME</div>
+					<div class="footer_text" id="f_email">Email: ramuzuconcepcion@gmail.com</div>
+					<div class="footer_text" id="f_phone">Phone: (+63) 975-245-6112</div>
 				</div>
 				<div class="footer_panel">
-					<div class="footer_title" themify="footer-text1">SOCIAL MEDIA</div>
+					<div class="footer_title">SOCIAL MEDIA</div>
 					<div id="social">
 						<div class="socialimg" id="sfb">
 							<img src="resources/facebook.png" />
@@ -143,8 +149,8 @@
 						</div>
 					</div>
 					<br>
-					<div class="footer_text" id="copyright_date"themify="footer-text2"></div>
-					<div class="footer_text" themify="footer-text2">This website is still under construction.</div>
+					<div class="footer_text" id="copyright_date"></div>
+					<div class="footer_text">This website is still under construction.</div>
 				</div>
 				<!-- <div class="footer_panel">
 					<img id="footer_logo" src="../resources/logo.png">
