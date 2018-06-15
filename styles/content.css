@@ -1,4 +1,57 @@
 
+#intro{
+	/* position: absolute; z-index: 0; */
+	height: auto;
+	width: 100%;
+	margin: 50px auto 0 auto;
+	text-align: center;
+}
+
+.introtext {
+	font-size: 18px;
+	text-align: center;
+	
+	color: #606060;
+	margin-bottom: 5px;
+	width: 100%;
+	
+	user-select: none;
+}
+
+#content1{
+	margin: 20px 0 0 0;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	padding: 20px 0;
+}
+
+.content-title{
+	color: #606060;
+	text-align: center;
+
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.content-body{
+	margin: 0 auto;
+	width: 60%;
+	color: #606060;
+	text-align: justify;
+
+	font-size: 18px;
+	text-indent: 20px;
+}
+
+#content2{
+	margin: 20px 0 0 0;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	padding: 20px 0;
+}
+
 .themify-buttons{
 	font-size: 16px;
 	background-color: transparent;
@@ -70,7 +123,29 @@
 /*************************GENERAL MOBILE MEDIA********************/
 
 @media only screen and (max-width: 1000px) {
+	#intro {
+		width: 90%;
+	}
 
+	.introtext {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+
+	.content-title{
+		font-size: 20px;
+	}
+	
+	.content-body{
+		width: 90%;
+	
+		font-size: 14px;
+		text-indent: 20px;
+	}
+
+	.themify-buttons{
+		font-size: 14px;
+	}
 }
 
 /*************************IPAD OR TABLET SPECIFICS********************/
