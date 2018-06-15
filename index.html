@@ -11,16 +11,14 @@
 
 	<title>Ramce Concepcion</title>
 
-	<link href="main.css" rel="stylesheet" />
-	<link href="footer.css" rel="stylesheet" />
+	<link href="styles/main.css" rel="stylesheet" />
+	<link href="styles/footer.css" rel="stylesheet" />
+	<link href="styles/content.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-
-
 </header>
 
 
 <body>
-
 	<div id="headerdiv">
 		<div id="hoptionswrapper">
 			<div class="hoptions" id="ho_home">HOME</div>
@@ -32,13 +30,13 @@
 
 	<div id="displaydiv">
 		<div id="homediv">
-			<div id="coverdiv">
+			<div id="coverdiv" themify="header-bg">
 				<img data-src="resources/cover.jpg" id="cover" class="lazy" />
 			</div>
 
 			<div id="ramcediv">
 				<div id="ramcefilter"></div>
-				<img data-src="resources/ramce.JPG" id="ramce" class="lazy"/>
+				<img data-src="resources/ramce.JPG" id="ramce" class="lazy" />
 			</div>
 
 			<div id="subheaderdiv">
@@ -51,48 +49,66 @@
 			</div>
 
 			<div id="intro">
-				<div id="int_content2" class="introtext">Full stack web developer but mainly focusing on complex front end logic.</div>
+				<div id="int_content2" class="introtext">Full stack web developer but primarily working on the front-end.</div>
 				<div id="int_content3" class="introtext">Also an IT on the sidewalk, can work around the Windows platform.</div>
-				<div id="int_content3" class="introtext">A gamer, pc hobbyist and foodie by nature.</div>
+				<div id="int_content3" class="introtext">A gamer, pc hobbyist and food freak by nature.</div>
 			</div>
 
 			<div id="content1">
-				<div class="content-title">ABOUT ME</div>
+				<div class="content-title" themify="text-title">ABOUT ME</div>
 				<div class="content-body">
 					<p>
-						I was born and raised in the province of Rizal, Philippines -- a thriving region east of Metro Manila and just above the famous
-						lake called Laguna de Bay. I am a degree holder of Bachelor of Science in Information Technology graduated from University
-						of Rizal System, Binangonan Campus last April 2017. I spent most of my life in Morong, Rizal, and I still do, I work
-						for a software company here as a software engineer.
+						I was born and raised in the province of Rizal, Philippines -- a thriving region east of Metro Manila and just above the
+						famous lake called Laguna de Bay. I am a degree holder of Bachelor of Science in Information Technology graduated from
+						University of Rizal System, Binangonan Campus last April 2017. I spent most of my life in Morong, Rizal, and I still
+						do, I work for a software company here as a software engineer.
 					</p>
 					<p>
-						I usually do the front-end side of the job, writing complex JavaScript logic for web applications of various nature.
-						I also write JavaScript-based libraries for both fun and work, developing algorithms and UI components in order
-						to make web development clean, professional and exciting.
-						Sometimes I work on the back-end and occassionally design websites, such as this one! Although obviously
-						it's not yet complete.
+						I usually do the front-end side of the job, writing JavaScript for web applications of various nature. I also
+						write JavaScript-based libraries for both fun and work, developing algorithms and UI components in order to make web
+						development clean, professional and exciting. Sometimes I work on the back-end and occassionally design websites, such
+						as this one, although this clearly isn't my best suit.
 					</p>
+				</div>
+			</div>
+			<div id="content2">
+				<div class="content-title" themify="text-title">My Personal Libraries</div>
+				<br><br>
+				<div class="content-title" themify="text-title">Themify</div>
+				<div class="content-body">
+					<p>
+						Themify is a small JavaScript theme library that allows you to dynamically apply specific sets of css properties on your
+						html elements based on JSON templates, thus, giving your web site or web app the capability to have multiple themes.
+						Especially useful when managing color schemes. Try it below:
+					</p>
+				</div>
+				<br>
+				<div id="themify-buttons">
+					<button themify="border,text-title" id="themifybutton1" class="themify-buttons active">Default</button>
+					<button themify="border,text-title" id="themifybutton2" class="themify-buttons">Calming Sky</button>
+					<button themify="border,text-title" id="themifybutton3" class="themify-buttons">Girly</button>
+					<button themify="border,text-title" id="themifybutton4" class="themify-buttons">Earth</button>
 				</div>
 			</div>
 		</div>
 
 
-		<div id="footer">
+		<div id="footer" themify="footer-bg">
 			<div id="footer_wrapper">
 				<div class="footer_panel">
-					<div class="footer_title">RAMCE CONCEPCION</div>
-					<div class="footer_text" id="f_about">
+					<div class="footer_title" themify="footer-text1">RAMCE CONCEPCION</div>
+					<div class="footer_text" id="f_about" themify="footer-text2">
 						I strive to deliver high quality products to the best of my capacity. I believe in pursuing and exploring new technologies
 						that may open the doors to new possibilities while living in a balance between work and life.
 					</div>
 				</div>
 				<div class="footer_panel">
-					<div class="footer_title">CONTACT ME</div>
-					<div class="footer_text" id="f_email">Email: ramuzuconcepcion@gmail.com</div>
-					<div class="footer_text" id="f_phone">Phone: (+63) 975-245-6112</div>
+					<div class="footer_title" themify="footer-text1">CONTACT ME</div>
+					<div class="footer_text" id="f_email" themify="footer-text2">Email: ramuzuconcepcion@gmail.com</div>
+					<div class="footer_text" id="f_phone" themify="footer-text2">Phone: (+63) 975-245-6112</div>
 				</div>
 				<div class="footer_panel">
-					<div class="footer_title">SOCIAL MEDIA</div>
+					<div class="footer_title" themify="footer-text1">SOCIAL MEDIA</div>
 					<div id="social">
 						<div class="socialimg" id="sfb">
 							<img src="resources/facebook.png" />
@@ -105,8 +121,8 @@
 						</div>
 					</div>
 					<br>
-					<div class="footer_text" id="copyright_date"></div>
-					<div class="footer_text">This website is still under construction.</div>
+					<div class="footer_text" id="copyright_date"themify="footer-text2"></div>
+					<div class="footer_text" themify="footer-text2">This website is still under construction.</div>
 				</div>
 				<!-- <div class="footer_panel">
 					<img id="footer_logo" src="../resources/logo.png">
@@ -120,7 +136,8 @@
 	</div>
 
 </body>
-
-<script src="main.js"></script>
+<script src="scripts/lib/Themify/themify.js"></script>
+<script src="scripts/demos.js"></script>
+<script src="scripts/main.js"></script>
 
 </html>

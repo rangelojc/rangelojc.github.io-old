@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Themify Sample</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+</head>
+
+<style>
+    body {
+        font-family: "Segoe UI"
+    }
+</style>
+
+<body>
+    <script src="themify.js"></script>
+
+    <div themify="primary-bg,primary-text-neutral">This is main</div>
+    <br>
+    <div themify="sub-bg,primary-text-neutral">This is sub</div>
+</body>
+
+<script>
+    function initializeTheme() {
+        Themify.themes = {
+            "my-custom-theme1": {
+                "primary-bg": {
+                    type: "background-color",
+                    value: "#404040"
+                },
+                "primary-font": {
+                    type: "font-family",
+                    value: "Segoe UI"
+                },
+                "primary-text-colored": {
+                    type: "color",
+                    value: "#404040"
+                },
+                "main-bg-neutral": {
+                    type: "background-color",
+                    value: "#fff"
+                },
+                "primary-text-neutral": {
+                    type: "color",
+                    value: "#fff"
+                },
+                "sub-bg": {
+                    type: "background-color",
+                    value: "#808080"
+                },
+                "sub-font": {
+                    type: "font-family",
+                    value: "Verdana"
+                },
+                "sub-text-colored": {
+                    type: "color",
+                    value: "#808080"
+                },
+            },
+            "my-custom-theme2": {
+                "primary-bg": {
+                    type: "background-color",
+                    value: "cornflowerblue"
+                },
+                "primary-font": {
+                    type: "font-family",
+                    value: "Segoe UI"
+                },
+                "primary-text-colored": {
+                    type: "color",
+                    value: "cornflowerblue"
+                },
+                "main-bg-neutral": {
+                    type: "background-color",
+                    value: "#fff"
+                },
+                "primary-text-neutral": {
+                    type: "color",
+                    value: "#fff"
+                },
+                "sub-bg": {
+                    type: "background-color",
+                    value: "deepskyblue"
+                },
+                "sub-font": {
+                    type: "font-family",
+                    value: "Verdana"
+                },
+                "sub-text-colored": {
+                    type: "color",
+                    value: "deepskyblue"
+                },
+            }
+        }
+
+        Themify.use("my-custom-theme1");
+    }
+
+    window.onload = function () {
+        initializeTheme();
+    }
+</script>
+
+
+</html>

@@ -1,0 +1,102 @@
+
+.themify-buttons{
+	font-size: 16px;
+	background-color: transparent;
+	border: 2px solid #606060;
+
+	height: 50px; width: 200px;
+	margin: 3px;
+
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+
+	border-radius: 0px;
+
+	transition: 300ms ease;
+	-webkit-transition: 300ms ease;
+	-ms-transition: 300ms ease;
+}
+
+/* #themifybutton1{
+	border: 2px solid #606060;
+	background-color: transparent;
+	color: #606060;
+} */
+
+#themifybutton1.active{
+	border: 2px solid #606060;
+	background-color: #606060;
+	color: #fff !important;
+}
+
+/* #themifybutton2{
+	border: 2px solid #84cdee;
+	background-color: transparent;
+	color: #84cdee;
+} */
+
+#themifybutton2.active{
+	border: 2px solid #84cdee;
+	background-color: #84cdee;
+	color: #fff !important;
+}
+
+/* #themifybutton3{
+	border: 2px solid #ff9ac7;
+	background-color: transparent;
+	color: #ff9ac7;
+} */
+
+#themifybutton3.active{
+	border: 2px solid #ff9ac7;
+	background-color: #ff9ac7;
+	color: #fff !important;
+}
+
+/* #themifybutton4{
+	border: 2px solid #266A2E;
+	background-color: transparent;
+	color: #266A2E;
+} */
+
+#themifybutton4.active{
+	border: 2px solid #2e4600;
+	background-color: #2e4600;
+	color: #fff !important;
+}
+
+/*************************GENERAL MOBILE MEDIA********************/
+
+@media only screen and (max-width: 1000px) {
+
+}
+
+/*************************IPAD OR TABLET SPECIFICS********************/
+
+@media screen and (width: 1024px) and (height: 768px) {
+	
+}
+
+@media screen and (width: 1366px) and (height: 1024px) {
+	
+}
+
+@media screen and (height: 1366px) and (width: 1024px) {
+	
+}
+
+/******************MOBILE PHONE SPECIFICS******************/
+
+@media screen and (max-width: 1025px) and (orientation: portrait) and (max-height: 750px) {
+
+}
+
+@media screen and (max-width: 1025px) and (orientation: landscape) and (max-height: 750px) {
+
+}
+
+/***FALLBACKS**/
+@media only screen and (max-width: 350px) {
+	
+}
