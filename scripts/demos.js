@@ -1,3 +1,11 @@
+function DemoPopUp(){
+	const module = {};
+
+
+
+	return module;
+}
+
 function ThemifyDemo() {
 	const module = {};
 
@@ -38,6 +46,10 @@ function ThemifyDemo() {
 					type: "background-color",
 					value: "#2e4600"
 				},
+				"resume-bg":{
+					type: "background-color",
+					value: "#fff"
+				},
 				"border":{
 					type: "border",
 					value: "2px solid #2e4600"
@@ -68,6 +80,10 @@ function ThemifyDemo() {
 					type: "background-color",
 					value: "#ff9ac7"
 				},
+				"resume-bg":{
+					type: "background-color",
+					value: "#fff"
+				},
 				"border":{
 					type: "border",
 					value: "2px solid #ff9ac7"
@@ -97,6 +113,10 @@ function ThemifyDemo() {
 				"header-bg": {
 					type: "background-color",
 					value: "#84cdee"
+				},
+				"resume-bg":{
+					type: "background-color",
+					value: "#fff"
 				},
 				"border":{
 					type: "border",
