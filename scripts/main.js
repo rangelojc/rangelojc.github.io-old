@@ -109,7 +109,10 @@ window.onload = function () {
 	const footer = new Footer()
 	footer.setDate();
 
-	const demo1 = new ThemifyDemo();
+	const speck = new Speck(subheaderdiv);
+	speck.render();
+
+	const demo1 = new TeemrDemo();
 	demo1.start();
 
 	LazyLoader();

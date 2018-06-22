@@ -1,7 +1,7 @@
 const Themify = {
     //internal
     _ver: 'v0.1',
-    _keyword: 'themify',
+    _keyword: 'teemr',
     _nodes: null,
     _query: function(){
         if(this._nodes) return;
@@ -25,16 +25,16 @@ const Themify = {
 		return Object.assign({}, this);
     },
     use: function(value){
-        this.theme = value;
+        this.active = value;
         this.apply();
     },
     apply: function () {
         this._query();
-        this.active = this.themes[this.theme];
+        this.theme = this.themes[this.active];
 		
         const nodes = this._nodes;
         const keyword = this._keyword;
-        const targetTheme = this.active;
+        const targetTheme = this.theme;
     
         for (let i = 0, len = nodes.length; i < len; i++) {
             const names = nodes[i][keyword].split(",");

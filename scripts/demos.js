@@ -6,7 +6,7 @@ function DemoPopUp(){
 	return module;
 }
 
-function ThemifyDemo() {
+function TeemrDemo() {
 	const module = {};
 
 	module.start = function () {
@@ -25,7 +25,7 @@ function ThemifyDemo() {
 					value: "2px solid #606060"
 				}
 			},
-			"mint": {
+			"grass": {
 				"primary": {
 					type: "background-color",
 					value: "#50c878"
@@ -69,6 +69,7 @@ function ThemifyDemo() {
 			},
 		}
 
+		Themify.use("default");
 		module.attachEvents();
 	}
 
@@ -78,16 +79,22 @@ function ThemifyDemo() {
 	}
 
 	module.stylizeButtons = function(btn){
-		const btns = document.querySelectorAll('.themify-buttons');
-		for(let i = 0; i < btns.length; i++) btns[i].classList.remove('active');
-		btn.classList.add('active');
+		const btns = document.querySelectorAll('.teemr-buttons');
+		for(let i = 0; i < btns.length; i++){
+			btns[i].classList.remove('active');
+			btns[i].style.backgroundColor = "transparent";
+		}
+
+		btn.style.color = "#fff";
+		btn.style.backgroundColor = Themify.theme.primary.value;
 	}
 
 	module.attachEvents = function () {
-		themifybutton1.onclick = function () { module.change("default", this); }
-		themifybutton2.onclick = function () { module.change("sky", this); }
-		themifybutton3.onclick = function () { module.change("girly", this); }
-		themifybutton4.onclick = function () { module.change("mint", this); }
+		teemrbutton1.onclick = function () { module.change("default", this); }
+		teemrbutton2.onclick = function () { module.change("sky", this); }
+		teemrbutton3.onclick = function () { module.change("girly", this); }
+		teemrbutton4.onclick = function () { module.change("grass", this); }
+		module.stylizeButtons(teemrbutton1);
 	}
 
 	return module;
