@@ -8,14 +8,14 @@ function Speck(container) {
     module._xMin = 0;
     module._particles = [];
 
-    module.count = 50;
+    module.count = 30;
     module.minSize = 2;
     module.maxSize = 8;
     module.color = '#f2f2f2';
     module.speed = 50;
     module.yChange = 2;
     module.xChange = 0.5;
-    module.direction = 'down'; //up or down
+    module.direction = 'up'; //up or down
 
     module._decorateParticle = function (div, i) {
         div.setAttribute('class', 'speck speck-no-' + i);
