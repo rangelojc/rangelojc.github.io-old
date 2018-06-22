@@ -11,7 +11,7 @@ function Speck(container) {
     module.count = 50;
     module.minSize = 2;
     module.maxSize = 8;
-    module.color = 'lightGray';
+    module.color = '#f2f2f2';
     module.speed = 50;
     module.yChange = 2;
     module.xChange = 0.5;
