@@ -69,7 +69,7 @@ body{
 
 #coverdiv{	
 	width: 100%;
-	height: 700px;
+	height: 600px;
 	margin-bottom: 20px;	
 
 	overflow: hidden;
@@ -111,7 +111,7 @@ body{
 	top: 0;
 	
 	width: 100%;
-	height: 700px;
+	height: 600px;
 	
 	background-color: rgba(0,0,0,0.4);
 	
