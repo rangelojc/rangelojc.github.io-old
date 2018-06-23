@@ -14,11 +14,11 @@ function TeemrDemo() {
 			"default": {
 				"primary": {
 					type: "background-color",
-					value: "#606060"
+					value: "#272727"
 				},
 				"primary-text": {
 					type: "color",
-					value: "#606060"
+					value: "#272727"
 				},
 				"primary-text-white": {
 					type: "color",
@@ -26,7 +26,7 @@ function TeemrDemo() {
 				},
 				"border":{
 					type: "border",
-					value: "2px solid #606060"
+					value: "2px solid #272727"
 				}
 			},
 			"grass": {
