@@ -8,18 +8,20 @@ function Speck(container) {
     module._xMin = 0;
     module._particles = [];
 
-    module.count = 30;
-    module.minSize = 2;
-    module.maxSize = 8;
-    module.color = '#f2f2f2';
+    module.count = 50;
+    module.minSize = 1;
+    module.maxSize = 5;
     module.speed = 50;
     module.yChange = 2;
-    module.xChange = 0.5;
+    module.xChange = 0;
     module.direction = 'up'; //up or down
+    module.color = '#fff';
+    module.border = '0px solid #fff';
 
     module._decorateParticle = function (div, i) {
         div.setAttribute('class', 'speck speck-no-' + i);
         div.style.backgroundColor = module.color;
+        div.style.border = module.border;
 
         const min = module.minSize;
         const max = module.maxSize;
@@ -55,45 +57,68 @@ function Speck(container) {
     }
 
     module._animateParticles = function (div) {
+        const interval = module.speed;
+        window.setTimeout(function () {
+            const computeThread = Workr.embedded([
+                {
+                    method: module._computeAnimation,
+                    success: function (r) {
+                        module._applyAnimation(div, r);
+                        module._animateParticles(div);
+                    }
+                }
+            ]);
+        }, interval);
+    }
+
+    module._computeAnimation = function () {
         const count = module.count;
         const yChange = module.yChange;
         const xChange = module.xChange;
-        const interval = module.speed;
         const yMax = module._yMax;
         const xMax = module._xMax;
         const direction = module.direction;
 
-        window.setInterval(function () {
-            let newY = 0;
-            if(module.direction == "up"){
+        let newY = 0, newX;
+
+        if (yChange != 0) {
+            if (module.direction == "up") {
                 newY = div.pos.y - yChange;
                 newY = newY <= 0 ? yMax : newY;
 
-                if(newY == yMax){
+                if (newY == yMax) {
                     div.style.opacity = 0;
-                    window.setTimeout(function(){ div.style.opacity = 1; }, module.speed * 3)
+                    window.setTimeout(function () { div.style.opacity = 1; }, module.speed * 3)
                 }
             }
-            else if(module.direction == "down"){
+            else if (module.direction == "down") {
                 newY = div.pos.y + yChange;
                 newY = newY >= yMax ? 0 : newY;
 
-                if(newY == 0){
+                if (newY == 0) {
                     div.style.opacity = 0;
-                    window.setTimeout(function(){ div.style.opacity = 1; }, module.speed * 3)
+                    window.setTimeout(function () { div.style.opacity = 1; }, module.speed * 3)
                 }
             }
-            div.style.top = newY + "px";
-            div.pos.y = newY;
 
-            let newX = Math.random() < 0.5 ? xChange : (-1 * xChange);
+        }
+
+        if (xChange != 0) {
+            newX = Math.random() < 0.5 ? xChange : (-1 * xChange);
             newX = div.pos.x - newX;
             newX = newX <= 0 ? 0 : newX;
             newX = newX >= xMax ? xMax : newX;
-            div.style.left = newX + "px";
-            div.pos.x = newX;
+        }
 
-        }, interval);
+        return { x: newX, y: newY }
+    }
+
+    module._applyAnimation = function (div, coords) {
+        div.style.top = coords.y + "px";
+        div.pos.y = coords.y;
+
+        div.style.left = coords.x + "px";
+        div.pos.x = coords.x;
     }
 
     module.render = function () {

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<body style="font-family: 'Segoe UI'; font-size: 12px">
+    <hr/> Worker 1 (Generate dataset every second)
+    <span id="worker1">-- standby</span>
+    <br/> Main Thread (Update text)
+    <span id="main1">-- standby</span>
+    <br/>
+    <br/>
+    <div id="arraydiv" style="width: 100%; white-space: pre-wrap;">Set: 1, </div>
+    <hr/> Worker 2 (Compute each value)
+    <span id="worker2">-- standby</span>
+    <br/> Main Thread (Update text)
+    <span id="main2">-- standby</span>
+    <br/>
+    <br/>
+    <div id="resultdiv">Result: </div>
+    <hr/>
+
+    Worker 3 (Compute values into pixels)
+    <span id="worker3">-- standby</span>
+    <br/> Main Thread (Plot pixels to loading bar)
+    <span id="main3">-- standby</span>
+    <br/>
+    <br/>
+    <div id="box" style="position: relative; width: 600px; height: 20px; border: 1px solid #ccc;">
+        <div id="bar1" style="position: absolute; top: 0; left: 0; height: 100%; width: 0px; background-color:#76b900; transition: 1000ms ease;"></div>
+    </div>
+    <hr/>
+
+    Main Thread Interactivity
+    <br/>
+    <input type="text" id="input1" oninput="input2.value = this.value; input3.value = this.value;"> <br>
+    <input type="text" id="input2" disabled> <br>
+    <input type="text" id="input3" disabled> <br>
+    <input type="radio"> <br>
+    <input type="radio"> <br>
+    <input type="checkbox"> <br>
+    <input type="checkbox"> <br>
+    <input type="checkbox"> <br>
+    <select></select>
+    <select></select>
+    <select></select>
+
+</body>
+
+<script>
+    let $generator = null;
+    let $processor = null;
+    let $plotter = null;
+    
+    let total = 0;
+    let set = [];
+
+    //web workers
+    function startGenerator() {
+        status(worker1, true);
+        $generator = new Worker("generator.js");
+        $generator.onmessage = function (r) { getGeneratedData(r); }
+    }
+
+    function startProcessor(value) {
+        const request = {
+            total: total,
+            value: value,
+        }
+
+        status(worker2, true);
+        $worker = new Worker("processor.js");
+        $worker.postMessage(request)
+        $worker.onmessage = function (r) { getResult(r); }
+    }
+
+    function startPlotter(data) {
+        status(worker3, true);
+        $plotter = new Worker("plotter.js");
+        $plotter.postMessage(data);
+        $plotter.onmessage = function (r) { plotData(r); }
+    }
+
+    //main thread functions
+    function status(element, working) {
+        if (working) element.textContent = "-- running";
+        if (!working) setTimeout(function(){ element.textContent = "-- standby"; }, 500);
+    }
+    
+    function getGeneratedData(response) {
+        status(main1, true);
+        const value = response.data;
+        set.push(value)
+        arraydiv.innerHTML += set[set.length - 1] + ", ";
+        status(main1, false);
+
+        startProcessor(value);
+    }
+
+    function getResult(response) {
+        status(worker2, false);
+        status(main2, true);
+        total = response.data;
+
+        if (total >= 1000) {
+            total = 1000;
+            $generator.terminate();
+            status(worker1, false);
+        }
+
+        resultdiv.innerHTML = "Result: " + response.data + "/1000";
+        status(main2, false);
+
+        startPlotter(total);
+    }
+
+    function plotData(response) {
+        status(worker3, false);
+        status(main3, true);
+        const width = response.data;
+        bar1.style.width = width + "px";
+
+        status(main3, false);
+    }
+
+    window.onload = function () {
+        startGenerator();
+    }
+</script>
+
+</html>

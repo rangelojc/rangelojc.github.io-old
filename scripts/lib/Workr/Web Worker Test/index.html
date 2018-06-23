@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<body style="font-family: 'Segoe UI'; font-size: 12px">
+    Looping inside worker thread
+
+    <div id="result" style="font-size: 30px">Looping</div>
+    <br> Interacting with the UI thread while a loop is ongoing
+    <br/>
+    <input type="text" id="input1" oninput="input2.value = this.value;">
+    <br>
+    <input type="text" id="input2" disabled>
+    <br>
+</body>
+
+<script src="workr.js"></script>
+
+<script>
+    let $looper = null;
+    let $workers = null;
+    let loopAnim = null;
+
+    function startWorker() {
+
+        $workers = Workr.multiprepd(
+            [
+                {
+                    url: 'array-looper.js',
+                    //method: generate,
+                    // data: 3000000000,
+                    success: function (r) {
+                        finishLoop(r.data);
+                    },
+                    error: function (r) {
+                        errorLoop(r.data);
+                    },
+                    beforeCreate: function () {
+                        showLoop();
+                    },
+                    beforeTerminate: function () {
+                        console.log('before terminate');
+                    }
+                }
+            ]
+        );
+
+        $workers = Workr.util.namify($workers,
+            ['looper']
+        );
+
+        console.log($workers);
+
+        $workers['looper'].run(3213213213);
+    }
+
+    function generate(times) {
+        let ctr = 0;
+
+        const time1 = Date.now();
+
+        for (let i = 0; i < times; i++) {
+            ctr++;
+        }
+
+        const time2 = Date.now();
+        const dff = time2 - time1;
+
+        return { count: ctr, time: dff };
+    }
+
+    function showLoop() {
+        let c = 0;
+
+        loopAnim = setInterval(function () {
+            c = c == 3 ? 1 : c + 1;
+            let dots = "";
+
+            for (let i = 0; i < c; i++) {
+                dots += ".";
+            }
+
+            result.innerHTML = "Looping" + dots;
+        }, 1000);
+    }
+
+    function finishLoop(response) {
+        clearInterval(loopAnim);
+
+        result.innerHTML = Number(response.count).toLocaleString() + " loops finished in " + response.time + "ms";
+    }
+
+    function errorLoop(response) {
+        clearInterval(loopAnim);
+
+        result.innerHTML = "Error!";
+
+        //$looper[0].terminate();
+        $workers.threads[0].terminate();
+    }
+
+    window.onload = function () {
+        startWorker();
+    }
+</script>
+
+</html>

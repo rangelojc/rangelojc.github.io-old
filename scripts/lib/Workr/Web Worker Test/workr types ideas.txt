@@ -1,0 +1,7 @@
+Workr
+.basic() -- single web worker created immediately (syntactic sugar)
+.multi() -- multiple web workers created immediately (syntactic sugar)
+.prepared() -- single web worker premade for future calls and accepts arguments later (syntactic sugar)
+.multiprep() -- multiple web worker premade for future calls and accepts arguments later (syntactic sugar)
+.embedded() -- multiple web workers that receives a whole function to be executed immediately.
+.embeddedprep() -- multiple web workers that receives a whole function to be executed with/without arguments later.

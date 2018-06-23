@@ -20,6 +20,10 @@ function TeemrDemo() {
 					type: "color",
 					value: "#606060"
 				},
+				"primary-text-white": {
+					type: "color",
+					value: "#fdfdfd"
+				},
 				"border":{
 					type: "border",
 					value: "2px solid #606060"
@@ -33,6 +37,10 @@ function TeemrDemo() {
 				"primary-text": {
 					type: "color",
 					value: "#50c878"
+				},
+				"primary-text-white": {
+					type: "color",
+					value: "#fdfdfd"
 				},
 				"border":{
 					type: "border",
@@ -48,6 +56,10 @@ function TeemrDemo() {
 					type: "color",
 					value: "#ff9ac7"
 				},
+				"primary-text-white": {
+					type: "color",
+					value: "#fdfdfd"
+				},
 				"border":{
 					type: "border",
 					value: "2px solid #ff9ac7"
@@ -61,6 +73,10 @@ function TeemrDemo() {
 				"primary-text": {
 					type: "color",
 					value: "#84cdee"
+				},
+				"primary-text-white": {
+					type: "color",
+					value: "#fdfdfd"
 				},
 				"border":{
 					type: "border",

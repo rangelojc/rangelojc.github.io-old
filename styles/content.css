@@ -8,10 +8,10 @@
 }
 
 .introtext {
-	font-size: 18px;
+	font-size: 0.9em;
 	text-align: center;
 	
-	color: #606060;
+	color: #404040;
 	margin-bottom: 5px;
 	width: 100%;
 	
@@ -27,20 +27,20 @@
 }
 
 .content-title{
-	color: #606060;
+	color: #404040;
 	text-align: center;
 
-	font-size: 26px;
+	font-size: 1.4em;
 	font-weight: bold;
 }
 
 .content-body{
 	margin: 0 auto;
 	width: 60%;
-	color: #606060;
+	color: #404040;
 	text-align: justify;
 
-	font-size: 18px;
+	font-size: 0.9em;
 	text-indent: 20px;
 }
 
@@ -57,27 +57,40 @@
 }
 
 .work-panel{
-	display: inline-block;
+	/* display: inline-block; */
 	height: auto;
-	width: 100%;
-	margin: 5px auto;
+	width: 60%;
+	padding: 40px;
+	margin: 5px auto 20px auto;
 	vertical-align: top;
+
+	background-color: #fdfdfd;
+	box-shadow: 0 1px 3px #ccc;
+	box-sizing: border-box;
 }
 
 .work-panel .content-body.subtitle{
-	font-size: 20px;
+	font-size: 1em;
 	font-weight: bold;
 	text-indent: 0;
 }
 
+.work-panel .content-body{
+	width: 100%;
+}
+
+#teemr-buttons{
+	width: 100%;
+}
+
 .teemr-buttons{
-	font-size: 16px;
+	font-size: 0.8em;
 	background-color: transparent;
 	border: 2px solid #606060;
 	color: #606060;
 
 	height: 40px; width: 180px;
-	margin: 3px;
+	margin: 3px 3px 3px 0;
 
 	text-align: center;
 	cursor: pointer;
@@ -97,12 +110,12 @@
 	}
 
 	.introtext {
-		font-size: 14px;
+		font-size: 0.7em;
 		margin-bottom: 5px;
 	}
 
 	.content-title{
-		font-size: 20px;
+		font-size: 1em;
 	}
 	
 	.content-body{
@@ -112,8 +125,8 @@
 		text-indent: 20px;
 	}
 
-	.themify-buttons{
-		font-size: 14px;
+	.teemr-buttons{
+		font-size: 0.7em;
 	}
 }
 

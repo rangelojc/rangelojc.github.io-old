@@ -36,7 +36,7 @@
 }
 
 .footer_text {
-    font-size: 14px;
+    font-size: 0.7em;
     height: auto; width: auto;
 
     text-align: left;
@@ -48,7 +48,7 @@
     display: inline-block;
     height: auto; width: auto;
     line-height: 15px;
-    font-size: 12px; 
+    font-size: 0.6em; 
     color: #d1d1d1;
 }
 
@@ -60,7 +60,7 @@
     cursor: pointer;
     user-select: none;
 
-    color: #26A0E6; font-size: 10px;
+    color: #26A0E6; font-size: 0.5em;
 }
 
 #iconmedia {
@@ -81,7 +81,7 @@
 
 /* #pf_copyright_date{
     font-size: 15px;
-    color:#fff;
+    color:#d1d1d1;
 } */
 
 #footer_logo{
@@ -91,7 +91,7 @@
 
 #f_slogan{
     text-align: center;
-    font-size: 14px;
+    font-size: 0.7em;
 }
 
 #f_about{
@@ -103,7 +103,7 @@
 }
 
 #f_disclaimer{
-    font-size: 10px;
+    font-size: 0.5em;
 }
 
 #social{		
