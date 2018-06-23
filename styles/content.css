@@ -125,6 +125,10 @@
 		text-indent: 20px;
 	}
 
+	.work-panel{
+		width: 90%;
+	}
+
 	.teemr-buttons{
 		font-size: 0.7em;
 	}
