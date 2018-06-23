@@ -59,19 +59,13 @@ function Speck(container) {
     module._animateParticles = function (div) {
         const interval = module.speed;
         window.setTimeout(function () {
-            const computeThread = Workr.embedded([
-                {
-                    method: module._computeAnimation,
-                    success: function (r) {
-                        module._applyAnimation(div, r);
-                        module._animateParticles(div);
-                    }
-                }
-            ]);
+            const coords = module._computeAnimation(div);
+            module._applyAnimation(div, coords);
+            module._animateParticles(div);
         }, interval);
     }
 
-    module._computeAnimation = function () {
+    module._computeAnimation = function (div) {
         const count = module.count;
         const yChange = module.yChange;
         const xChange = module.xChange;
