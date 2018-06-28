@@ -14,7 +14,8 @@ function Speck(container) {
     module.speed = 50;
     module.yChange = 2;
     module.xChange = 0;
-    module.direction = 'up'; //up or down
+    module.rightToLeft = 0.8;
+    module.direction = 'down'; //up or down
     module.color = '#fff';
     module.border = '0px solid #fff';
 
@@ -66,12 +67,13 @@ function Speck(container) {
     }
 
     module._computeAnimation = function (div) {
+        const yMax = module._yMax;
+        const xMax = module._xMax;
         const count = module.count;
         const yChange = module.yChange;
         const xChange = module.xChange;
-        const yMax = module._yMax;
-        const xMax = module._xMax;
         const direction = module.direction;
+        const rightToLeft = module.rightToLeft;
 
         let newY = 0, newX;
 
@@ -98,9 +100,9 @@ function Speck(container) {
         }
 
         if (xChange != 0) {
-            newX = Math.random() < 0.5 ? xChange : (-1 * xChange);
+            newX = Math.random() < rightToLeft ? xChange : (-1 * xChange);
             newX = div.pos.x - newX;
-            newX = newX <= 0 ? 0 : newX;
+            newX = newX <= 0 ? xMax : newX;
             newX = newX >= xMax ? xMax : newX;
         }
 

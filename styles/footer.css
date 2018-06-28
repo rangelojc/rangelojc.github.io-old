@@ -1,5 +1,5 @@
 
-#footer {
+#footer {    
     margin: 50px 0 0 0;
     padding: 20px 0;
     height: auto;
@@ -9,7 +9,10 @@
 }
 
 #footer_wrapper{
-    margin: 100px 0 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
 
     height: 100%;
     max-width: 100%;
@@ -17,8 +20,6 @@
 }
 
 .footer_panel {
-    display: inline-block;
-    vertical-align: top;
     margin: 20px 20px;
     width: 300px;
     height: auto;
