@@ -56,7 +56,7 @@ function HomePage() {
 			const sliderW = coverdiv.getBoundingClientRect().width;
 
 			if (sliderW < 900) cover.style.marginTop = 0;
-			else cover.style.marginTop = (window.scrollY * -0.3) + "px";
+			else cover.style.marginTop = (window.scrollY) + "px";
 		});
 	}
 

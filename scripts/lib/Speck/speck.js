@@ -15,7 +15,7 @@ function Speck(container) {
     module.yChange = 2;
     module.xChange = 0;
     module.rightToLeft = 0.8;
-    module.direction = 'down'; //up or down
+    module.direction = 'up'; //up or down
     module.color = '#fff';
     module.border = '0px solid #fff';
 
