@@ -11,8 +11,8 @@ function Speck(container) {
     module.count = 50;
     module.minSize = 1;
     module.maxSize = 5;
-    module.speed = 50;
-    module.yChange = 2;
+    module.speed = 200;
+    module.yChange = 6;
     module.xChange = 0;
     module.rightToLeft = 0.8;
     module.direction = 'up'; //up or down
@@ -31,9 +31,9 @@ function Speck(container) {
         div.style.width = hw;
         div.style.position = 'absolute';
         div.style.borderRadius = '50%';
-        div.style.transition = "top " + module.speed + "ms ease, " + "left " + module.speed + "ms ease";
-        div.style.WebkitTransition = "top " + module.speed + "ms ease, " + "left " + module.speed + "ms ease";
-        div.style.MsTransition = "top " + module.speed + "ms ease, " + "left " + module.speed + "ms ease";
+        div.style.transition = "top " + module.speed + "ms linear, " + "left " + module.speed + "ms linear";
+        div.style.WebkitTransition = "top " + module.speed + "ms linear, " + "left " + module.speed + "ms linear";
+        div.style.MsTransition = "top " + module.speed + "ms linear, " + "left " + module.speed + "ms linear";
 
         const yMax = module._yMax;
         const yMin = module._yMin;
@@ -82,7 +82,7 @@ function Speck(container) {
                 newY = div.pos.y - yChange;
                 newY = newY <= 0 ? yMax : newY;
 
-                if (newY == yMax) {
+                if (newY >= yMax) {
                     div.style.opacity = 0;
                     window.setTimeout(function () { div.style.opacity = 1; }, module.speed * 3)
                 }
@@ -91,7 +91,7 @@ function Speck(container) {
                 newY = div.pos.y + yChange;
                 newY = newY >= yMax ? 0 : newY;
 
-                if (newY == 0) {
+                if (newY <= 0) {
                     div.style.opacity = 0;
                     window.setTimeout(function () { div.style.opacity = 1; }, module.speed * 3)
                 }

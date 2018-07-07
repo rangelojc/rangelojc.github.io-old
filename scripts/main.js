@@ -51,12 +51,7 @@ function HomePage() {
 		if (window.scrollY === undefined || window.scrollY === null) return;
 
 		window.addEventListener('scroll', function () {
-			if(document.querySelectorAll('#cover').length == 0) return;
-			
-			const sliderW = coverdiv.getBoundingClientRect().width;
-
-			if (sliderW < 900) cover.style.marginTop = 0;
-			else cover.style.marginTop = (window.scrollY) + "px";
+			cover.style.marginTop = (window.scrollY) + "px";
 		});
 	}
 
