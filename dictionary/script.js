@@ -17,7 +17,10 @@ function send(query) {
 function render(response, title) {
     const items = response;
 
+    console.log(items);
+    
     results.innerHTML = "";
+
     if (items.length == 0) {
         results.innerHTML = "No Results";
     }
