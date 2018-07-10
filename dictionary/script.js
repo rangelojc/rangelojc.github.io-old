@@ -54,7 +54,7 @@ function renderItems(item) {
 
     const example = document.createElement('div');
     example.classList.add('item-example');
-    example.textContent = item.example;
+    example.textContent = item.example ? item.example : "No example.";
     wrapper.appendChild(type);
     wrapper.appendChild(definition);
 
