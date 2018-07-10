@@ -10,7 +10,7 @@ function send(query) {
         crossDomain: true,
         dataType: 'jsonp',
         complete: function (r) {
-            render(r.responseText, query);
+            render(r, query);
         },
     });
 }
@@ -18,26 +18,26 @@ function render(response, title) {
     const items = response;
 
     console.log(items);
-    
+
     results.innerHTML = "";
 
     if (items.length == 0) {
         results.innerHTML = "No Results";
     }
     else {
-        const resultwrapper_1 = document.createElement('div');
-        resultwrapper_1.classList.add('result-panel');
+        const resultpanel = document.createElement('div');
+        resultpanel.classList.add('result-panel');
 
         const resulttitle = document.createElement('div');
         resulttitle.classList.add('result-title');
         resulttitle.textContent = title;
 
-        resultwrapper_1.appendChild(resulttitle);
+        resultpanel.appendChild(resulttitle);
         items.forEach(function (r) {
-            var item = renderItems(r);
-            resultwrapper_1.appendChild(item);
+            const item = renderItems(r);
+            resultpanel.appendChild(item);
         });
-        results.appendChild(resultwrapper_1);
+        results.appendChild(resultpanel);
     }
 }
 function renderItems(item) {
