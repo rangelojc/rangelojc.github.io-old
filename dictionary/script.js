@@ -10,7 +10,7 @@ function send(query) {
         crossDomain: true,
         dataType: 'jsonp',
         complete: function (r) {
-            render(r, query);
+            render(r.responseCode, query);
         },
     });
 }
