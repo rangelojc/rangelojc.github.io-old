@@ -7,7 +7,8 @@ function send(query) {
     $.ajax({
         method: "get",
         url: url + query + "?format=json",
-        dataType: "application/json",
+        crossDomain: true,
+        dataType: 'jsonp',
         complete: function (r) {
             render(r.responseText, query);
         },
