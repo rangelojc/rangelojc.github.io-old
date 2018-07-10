@@ -15,7 +15,7 @@ function send(query) {
     });
 }
 function render(response, title) {
-    const items = JSON.parse(response);
+    const items = response;
 
     results.innerHTML = "";
     if (items.length == 0) {
