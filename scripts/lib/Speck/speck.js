@@ -10,7 +10,7 @@ function Speck(container) {
     module._particleGroups = {};
 
     //appearance properties
-    module.count = 60;
+    module.count = 50;
     module.minSize = 2;
     module.maxSize = 10;
     module.minOpacity = 1;
