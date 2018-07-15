@@ -154,18 +154,16 @@ body{
 	cursor: pointer;
 	outline: none;
 
-	border-radius: 0px;
+	border-radius: 30px;
 
-	transition: 50ms ease;
-	-webkit-transition: 50ms ease;
-	-ms-transition: 50ms ease;
+	transition: 200ms ease;
+	-webkit-transition: 200ms ease;
+	-ms-transition: 200ms ease;
 }
 
 #resume:hover{
-	/* width: 250px; */
-	background-color: #272727;
-	color: #fdfdfd;
-	border: 0;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 0;
 }
 
 #intro{

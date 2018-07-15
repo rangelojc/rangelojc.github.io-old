@@ -96,21 +96,21 @@ function LazyLoader() {
 }
 
 window.onload = function () {
-	const social = new SocialMedia();
-	social.setEvents();
+	window.social = new SocialMedia();
+	window.social.setEvents();
 
-	const home = new HomePage();
-	home.applyParallax();
-	home.setEvents();
+	window.home = new HomePage();
+	window.home.applyParallax();
+	window.home.setEvents();
 
-	const footer = new Footer()
-	footer.setDate();
+	window.footer = new Footer()
+	window.footer.setDate();
 
-	const speck = new Speck(subheaderdiv);
-	speck.render();
+	window.speck = new Speck(subheaderdiv);
+	window.speck.render();
 
-	const demo1 = new TeemrDemo();
-	demo1.start();
+	window.teemr = new TeemrDemo();
+	window.teemr.start();
 
 	LazyLoader();
 };
