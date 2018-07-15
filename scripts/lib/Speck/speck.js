@@ -21,16 +21,19 @@ function Speck(container) {
 
     //animation properties
     module.yChange = 20;
-    module.xChange = 6;
+    module.xChange = 0;
     module.yMaxThreshold = 20;
     module.yMinThreshold = -20;
     module.xMaxThreshold = 20;
     module.xMinThreshold = -20;
 
     module.speed = 500;
-    module.rightToLeft = 0.9;
+    module.rightToLeft = 1;
     module.direction = 'down';
     module.simulateDistance = true;
+
+    //controls
+    module.engine = null;
 
     module._setStyles = function (div, i) {
         div.setAttribute('class', 'speck speck-no-' + i);
@@ -96,23 +99,13 @@ function Speck(container) {
 
     module._animateParticles = function (div) {
         const interval = module.speed;
+        const adj = module.simulateDistance ? module._adjustDistance(parseInt(div.size), module.speed) : null;
 
-        if (!module.simulateDistance) {
-            window.setTimeout(function () {
-                const coords = module._computeAnimation(div);
-                module._applyAnimation(div, coords);
-                module._animateParticles(div);
-            }, interval);
-        }
-        else {
-            const adj = module._adjustDistance(parseInt(div.size), module.speed);
-
-            window.setTimeout(function () {
-                const coords = module._computeAnimation(div, adj);
-                module._applyAnimation(div, coords);
-                module._animateParticles(div);
-            }, interval);
-        }
+        module.engine = window.setTimeout(function () {
+            const coords = module._computeAnimation(div, adj);
+            module._applyAnimation(div, coords);
+            module._animateParticles(div);
+        }, interval);
     }
 
     module._adjustDistance = function (size, speed) {
@@ -196,6 +189,10 @@ function Speck(container) {
             module._particles.push(div);
             module._container.appendChild(div);
         }
+    }
+
+    module.control = function(action){
+        
     }
 
     return module;
