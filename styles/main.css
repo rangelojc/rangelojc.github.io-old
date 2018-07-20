@@ -69,7 +69,7 @@ body{
 
 #coverdiv{	
 	width: 100%;
-	height: 600px;
+	height: 100vh;
 
 	overflow: hidden;
 	background-color: #cacaca;
@@ -79,38 +79,15 @@ body{
 	width: 100%;
 }
 
-#ramcediv{
-	position: absolute; z-index: 2;
-	top: 0; right: 0; left: 0;
-	margin: 50px auto auto auto;
-	
-	height: 300px;
-	width: 300px;
-	overflow: hidden;
-	
-	border: 2px solid white;
-	border-radius: 100%;
-	/* box-shadow: 0px 0px 6px gray; */
-	background-color: #cacaca;
-}
-
-#ramcefilter{
-	position: absolute;
-	height: 100%; width: 100%;
-	background-color: rgba(0,0,0,0.1);
-}
-
-#ramce{
-	position: absolute; z-index: 0;
-	height: 100%; width: 100%;
-}
-
 #subheaderdiv{
+	display: flex; flex-flow: column nowrap;
+	align-items: center; justify-content: center;
+
 	position: absolute; z-index: 1;
 	top: 0;
 	
 	width: 100%;
-	height: 600px;
+	height: 100vh;
 	
 	background-color: rgba(0,0,0,0.7);
 	
@@ -129,13 +106,14 @@ body{
 
 #sht_ramce{
 	font-size: 2em;
-	margin: 375px 0 15px 0;
+	margin: 0px 0 15px 0;
 }
 	
 #sht_ramce2{
 	font-size: 0.8em;
 	font-weight: lighter;
 }
+
 
 #resume_wrapper{
 	width: 100%; height: auto;
@@ -166,24 +144,6 @@ body{
 	border-radius: 0;
 }
 
-#intro{
-	display: none;
-	height: auto;
-	width: 100%;
-	margin: 0 auto 0 auto;
-	text-align: center;
-}
-
-.introtext {
-	font-size: 0.9em;
-	text-align: center;
-	
-	color: #404040;
-	margin-bottom: 5px;
-	width: 100%;
-	
-	user-select: none;
-}
 
 /*************************GENERAL MOBILE MEDIA********************/
 
@@ -204,54 +164,31 @@ body{
 		line-height: 50px;
 	}
 
-	#subheaderdiv {
-		width: 100%;
-		height: 400px;
-	}
 	.subheadertext {
 		height: 50px;
 		width: 100%;
 	}
+
 	#sht_ramce {
 		font-size: 0.8em;
-		margin: 240px 0 5px 0;
+		margin: 0px 0 5px 0;
 		height: auto;
 	}
 	#sht_ramce2 {
 		font-size: 0.6em;
 	}
-	#coverdiv {
-		width: 100%;
-		height: 400px;
-	}
+
 	#cover {
 		margin-top: 0px;
 		height: 120%;
 		width: auto;
 	}
-	#ramcediv {
-		margin: 30px auto 0 auto;
-		height: 180px;
-		width: 180px;
-	}
-	#ramce {
-		height: 180px;
-		width: 180px;
-	}
+
 
 	#resume{
 		margin: -10px 0 0 0;
 		height: 50px; width: 150px;
 		font-size: 0.6em;
-	}
-
-	#intro {
-		width: 90%;
-	}
-
-	.introtext {
-		font-size: 0.7em;
-		margin-bottom: 5px;
 	}
 }
 
@@ -260,7 +197,6 @@ body{
 @media screen and (width: 1024px) and (height: 768px) {
 	#cover {
 		margin-top: 0px;
-		height: auto;
 		width: 150%;
 	}
 }
@@ -268,7 +204,6 @@ body{
 @media screen and (width: 1366px) and (height: 1024px) {
 	#cover {
 		margin-top: 0px;
-		height: auto;
 		width: 120%;
 	}
 }
@@ -276,7 +211,6 @@ body{
 @media screen and (height: 1366px) and (width: 1024px) {
 	#cover {
 		margin-top: 0px;
-		height: auto;
 		width: 120%;
 	}
 }

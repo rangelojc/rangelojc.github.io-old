@@ -10,7 +10,7 @@ function Speck(container) {
     module._particleGroups = {};
 
     //appearance properties
-    module.count = 50;
+    module.count = 40;
     module.minSize = 2;
     module.maxSize = 10;
     module.minOpacity = 1;
@@ -28,7 +28,7 @@ function Speck(container) {
     module.xMinThreshold = -20;
 
     module.speed = 500;
-    module.rightToLeft = 1;
+    module.rightToLeft = 0.8;
     module.direction = 'down';
     module.simulateDistance = true;
 
