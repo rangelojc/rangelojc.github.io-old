@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Themify Sample</title>
+    <title>Teemr Sample</title>
     <meta name="description" content="">
     <meta name="author" content="">
 </head>
@@ -17,16 +17,16 @@
 </style>
 
 <body>
-    <script src="themify.js"></script>
+    <script src="teemr.js"></script>
 
-    <div themify="primary-bg,primary-text-neutral">This is main</div>
+    <div teemr="primary-bg,primary-text-neutral">This is main</div>
     <br>
-    <div themify="sub-bg,primary-text-neutral">This is sub</div>
+    <div teemr="sub-bg,primary-text-neutral">This is sub</div>
 </body>
 
 <script>
     function initializeTheme() {
-        Themify.themes = {
+        Teemr.themes = {
             "my-custom-theme1": {
                 "primary-bg": {
                     type: "background-color",
@@ -97,7 +97,7 @@
             }
         }
 
-        Themify.use("my-custom-theme1");
+        Teemr.use("my-custom-theme1");
     }
 
     window.onload = function () {

@@ -1,4 +1,4 @@
-const Themify = {
+const Teemr = {
     //internal
     _ver: 'v0.1',
     _keyword: 'teemr',

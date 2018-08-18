@@ -1,49 +1,3 @@
-function SocialMedia() {
-	const component = {}
-
-	component.openURL = function (url) {
-		const win = window.open(url, '_blank');
-		win.focus();
-	}
-
-	component.hover = function (el, action, evt) {
-		switch (action) {
-			case true: el.style.opacity = 1; break;
-			case false: el.style.opacity = 0.8; break;
-		}
-
-		evt.preventDefault();
-	}
-
-	component.showEmail = function () {
-		alert('Email me at ramuzuconcepcion@gmail.com');
-
-	}
-
-	component.setEvents = function () {
-		sfb.onclick = function () { component.openURL('https://www.facebook.com/ramceconcepcion'); };
-		sfb.onmouseover = function (evt) { component.hover(this, true, evt); };
-		sfb.onmouseleave = function (evt) { component.hover(this, false, evt); };
-		sfb.onmouseup = function (evt) { component.hover(this, false, evt); };
-
-		stw.onclick = function () { component.openURL('https://www.twitter.com/ramceangelo'); };
-		stw.onmouseover = function (evt) { component.hover(this, true, evt); };
-		stw.onmouseleave = function (evt) { component.hover(this, false, evt); };
-		stw.onmouseup = function (evt) { component.hover(this, false, evt); };
-
-		// sgo.onclick = function () { showEmail(); }
-		// sgo.onmouseover = function (evt) { component.hover(this, true, evt); };
-		// sgo.onmouseleave = function (evt) { component.hover(this, false, evt); };
-		// sgo.onmouseup = function (evt) { component.hover(this, false, evt); };
-
-		sig.onclick = function () { component.openURL('https://www.instagram.com/ramceangelo_/'); };
-		sig.onmouseover = function (evt) { component.hover(this, true, evt); };
-		sig.onmouseleave = function (evt) { component.hover(this, false, evt); };
-		sig.onmouseup = function (evt) { component.hover(this, false, evt); };
-	}
-	return component;
-}
-
 function HomePage() {
 	const component = {};
 
@@ -53,7 +7,7 @@ function HomePage() {
 		window.addEventListener('scroll', function () {
 			const sliderW = coverdiv.getBoundingClientRect().width;
 			if (sliderW < 900) cover.style.marginTop = 0;
-			else cover.style.marginTop = (window.scrollY) + "px";
+			else cover.style.marginTop = (window.scrollY - (window.scrollY * 0.2)) + "px";
 		});
 	}
 
@@ -84,33 +38,77 @@ function Footer() {
 	return footer;
 }
 
-function LazyLoader() {
-	const imgs = document.querySelectorAll('img[data-src]');
+function SocialMedia() {
+	const component = {}
 
-	for (let i = 0, len = imgs.length; i < len; i++) {
-		imgs[i].setAttribute('src', imgs[i].getAttribute('data-src'));
-		imgs[i].onload = function () {
-			this.removeAttribute('data-src');
-		};
+	component.openURL = function (url) {
+		const win = window.open(url, '_blank');
+		win.focus();
 	}
+
+	component.hover = function (el, action, evt) {
+		switch (action) {
+			case true: el.style.opacity = 1; break;
+			case false: el.style.opacity = 0.8; break;
+		}
+
+		evt.preventDefault();
+	}
+
+	component.setEvents = function () {
+		sfb.onclick = function () { component.openURL('https://www.facebook.com/ramceconcepcion'); };
+		sfb.onmouseover = function (evt) { component.hover(this, true, evt); };
+		sfb.onmouseleave = function (evt) { component.hover(this, false, evt); };
+		sfb.onmouseup = function (evt) { component.hover(this, false, evt); };
+
+		stw.onclick = function () { component.openURL('https://www.twitter.com/ramceangelo'); };
+		stw.onmouseover = function (evt) { component.hover(this, true, evt); };
+		stw.onmouseleave = function (evt) { component.hover(this, false, evt); };
+		stw.onmouseup = function (evt) { component.hover(this, false, evt); };
+
+		sig.onclick = function () { component.openURL('https://www.instagram.com/ramceangelo_/'); };
+		sig.onmouseover = function (evt) { component.hover(this, true, evt); };
+		sig.onmouseleave = function (evt) { component.hover(this, false, evt); };
+		sig.onmouseup = function (evt) { component.hover(this, false, evt); };
+	}
+	
+	return component;
 }
 
+function Utilities() {
+	return {
+		lazyLoad: function(){
+			const imgs = document.querySelectorAll('img[data-src]');
+
+			for (let i = 0, len = imgs.length; i < len; i++) {
+				imgs[i].setAttribute('src', imgs[i].getAttribute('data-src'));
+				imgs[i].onload = function () {
+					this.removeAttribute('data-src');
+				};
+			}
+		}
+	}	
+}
+
+const App = {};
+
 window.onload = function () {
-	window.social = new SocialMedia();
-	window.social.setEvents();
+	App.Home = new HomePage();
+	App.Home.applyParallax();
+	App.Home.setEvents();
 
-	window.home = new HomePage();
-	window.home.applyParallax();
-	window.home.setEvents();
+	App.Footer = new Footer()
+	App.Footer.setDate();
 
-	window.footer = new Footer()
-	window.footer.setDate();
+	App.Social = new SocialMedia();
+	App.Social.setEvents();
 
-	window.speck = new Speck(subheaderdiv);
-	window.speck.render();
+	App.Speck = new Speck(subheaderdiv);
+	App.Speck.render();
 
-	window.teemr = new TeemrDemo();
-	window.teemr.start();
+	App.Teemr = new TeemrDemo();
+	App.Teemr.start();
 
-	LazyLoader();
+	App.Utilities = new Utilities();
+	App.Utilities.lazyLoad();
 };

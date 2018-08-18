@@ -1,16 +1,8 @@
-function DemoPopUp(){
-	const module = {};
-
-
-
-	return module;
-}
-
 function TeemrDemo() {
 	const module = {};
 
 	module.start = function () {
-		Themify.themes = {
+		Teemr.themes = {
 			"default": {
 				"primary": {
 					type: "background-color",
@@ -85,12 +77,12 @@ function TeemrDemo() {
 			},
 		}
 
-		Themify.use("default");
+		Teemr.use("default");
 		module.attachEvents();
 	}
 
 	module.change = function (name, btn) {
-		Themify.use(name);
+		Teemr.use(name);
 		module.stylizeButtons(btn);
 	}
 
@@ -102,7 +94,7 @@ function TeemrDemo() {
 		}
 
 		btn.style.color = "#fff";
-		btn.style.backgroundColor = Themify.theme.primary.value;
+		btn.style.backgroundColor = Teemr.theme.primary.value;
 	}
 
 	module.attachEvents = function () {
