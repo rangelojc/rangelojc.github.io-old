@@ -7,7 +7,7 @@ function HomePage() {
 		window.addEventListener('scroll', function () {
 			const sliderW = coverdiv.getBoundingClientRect().width;
 			if (sliderW < 900) cover.style.marginTop = 0;
-			else cover.style.marginTop = (window.scrollY - (window.scrollY * 0.2)) + "px";
+			else cover.style.marginTop = (window.scrollY - (window.scrollY * 0)) + "px";
 		});
 	}
 
@@ -75,23 +75,7 @@ function SocialMedia() {
 	return component;
 }
 
-function Utilities() {
-	return {
-		lazyLoad: function(){
-			const imgs = document.querySelectorAll('img[data-src]');
-
-			for (let i = 0, len = imgs.length; i < len; i++) {
-				imgs[i].setAttribute('src', imgs[i].getAttribute('data-src'));
-				imgs[i].onload = function () {
-					this.removeAttribute('data-src');
-				};
-			}
-		}
-	}	
-}
-
 const App = {};
-
 window.onload = function () {
 	App.Home = new HomePage();
 	App.Home.applyParallax();
@@ -103,12 +87,15 @@ window.onload = function () {
 	App.Social = new SocialMedia();
 	App.Social.setEvents();
 
-	App.Speck = new Speck(subheaderdiv);
-	App.Speck.render();
+	//App.Speck = new Speck(subheaderdiv);
+	//App.Speck.render();
 
-	App.Teemr = new TeemrDemo();
+	App.Teemr = new ThemeUtil();
 	App.Teemr.start();
 
-	App.Utilities = new Utilities();
+	App.Utilities = new MainUtil();
 	App.Utilities.lazyLoad();
+
+	TypeAnimationUtil();
+
 };
