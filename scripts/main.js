@@ -21,7 +21,27 @@ function HomePage() {
 	}
 
 	component.setEvents = function () {
-		resume.onclick = function () { component.open("files/resume.pdf"); }
+		resume.onclick = function () { component.attemptGet("files/resume.pdf"); }
+	}
+
+	component.attemptGet = function (url) {
+		const response = prompt("File restricted. You can ask me for the password. Please enter a password: ");
+
+		const attrs = ['enca', 'encb', 'encc'];
+		const el1 = document.querySelector('[' + attrs[0] + ']');
+		const el2 = document.querySelector('[' + attrs[1] + ']');
+		const el3 = document.querySelector('[' + attrs[2] + ']');
+		const pw =
+			el1.getAttribute(attrs[0]).replace(/_/g, '') + 
+			el2.getAttribute(attrs[1]).replace(/_/g, '') +
+			el3.getAttribute(attrs[2]).replace(/_/g, '');
+
+		if (response == pw) {
+			component.open(url);
+		}
+		else{
+			alert("You are not authorized to view this file. You can try hacking it, it's absurdly simple and improvised. :-P");
+		}
 	}
 
 	return component;
@@ -71,7 +91,7 @@ function SocialMedia() {
 		sig.onmouseleave = function (evt) { component.hover(this, false, evt); };
 		sig.onmouseup = function (evt) { component.hover(this, false, evt); };
 	}
-	
+
 	return component;
 }
 
