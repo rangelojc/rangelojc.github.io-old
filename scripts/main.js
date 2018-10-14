@@ -32,14 +32,15 @@ function HomePage() {
 		const el2 = document.querySelector('[' + attrs[1] + ']');
 		const el3 = document.querySelector('[' + attrs[2] + ']');
 		const pw =
-			el1.getAttribute(attrs[0]).replace(/_/g, '') + 
+			el1.getAttribute(attrs[0]).replace(/_/g, '') +
 			el2.getAttribute(attrs[1]).replace(/_/g, '') +
 			el3.getAttribute(attrs[2]).replace(/_/g, '');
 
-		if (response == pw) {
+		if (response == null) { return; }
+		else if (response == pw) {
 			component.open(url);
 		}
-		else{
+		else if (response != pw) {
 			alert("You are not authorized to view this file. You can try hacking it, it's absurdly simple and improvised. :-P");
 		}
 	}
