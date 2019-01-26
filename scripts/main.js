@@ -140,5 +140,4 @@ window.onload = function () {
 	App.Social.setEvents();
 
 	App.Main.animate();
-
 };
