@@ -135,6 +135,7 @@ App.Social = function () {
 window.onload = function () {
 	App.Main.applyParallax();
 	App.Main.setEvents();
+	App.Main.lazyLoad();
 
 	App.Footer.setDate();
 	App.Social.setEvents();
