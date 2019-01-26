@@ -85,6 +85,8 @@ function TypeAnimation(element, property) {
         }, speed);
     }
 
+    //
+
     public.element = element;
     public.property = property ? property : "textContent";
     public.speed = 70;

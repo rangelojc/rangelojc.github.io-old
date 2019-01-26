@@ -1,4 +1,6 @@
-function HomePage() {
+const App = {};
+
+App.Main = function () {
 	const component = {};
 
 	component.applyParallax = function () {
@@ -45,10 +47,44 @@ function HomePage() {
 		}
 	}
 
-	return component;
-}
+	component.lazyLoad = function () {
+		const imgs = document.querySelectorAll('img[data-src]');
 
-function Footer() {
+		[].forEach.call(imgs, function (img) {
+			img.setAttribute('src', img.getAttribute('data-src'));
+			img.onload = function () {
+				this.removeAttribute('data-src');
+			};
+		});
+	}
+
+	component.animate = function () {
+		const animate1 = new TypeAnimation(sht_ramce, "innerHTML");
+		const animate2 = new TypeAnimation(sht_ramce2, "innerHTML");
+
+		const a1 = function () {
+			animate1.pauses = { 6: 400, 16: 400 }
+			animate1.start();
+			animate1.after = a2;
+		}
+
+		const a2 = function () {
+			animate2.pauses = { 33: 10000 }
+			animate2.start();
+			animate2.after = function () {
+				a1();
+				sht_ramce.innerHTML = "";
+				sht_ramce2.innerHTML = "";
+			}
+		}
+
+		a1();
+	}
+
+	return component;
+}();
+
+App.Footer = function () {
 	const footer = {};
 
 	footer.setDate = function () {
@@ -57,9 +93,9 @@ function Footer() {
 	}
 
 	return footer;
-}
+}();
 
-function SocialMedia() {
+App.Social = function () {
 	const component = {}
 
 	component.openURL = function (url) {
@@ -94,29 +130,15 @@ function SocialMedia() {
 	}
 
 	return component;
-}
+}();
 
-const App = {};
 window.onload = function () {
-	App.Home = new HomePage();
-	App.Home.applyParallax();
-	App.Home.setEvents();
+	App.Main.applyParallax();
+	App.Main.setEvents();
 
-	App.Footer = new Footer()
 	App.Footer.setDate();
-
-	App.Social = new SocialMedia();
 	App.Social.setEvents();
 
-	//App.Speck = new Speck(subheaderdiv);
-	//App.Speck.render();
-
-	App.Teemr = new ThemeUtil();
-	App.Teemr.start();
-
-	App.Utilities = new MainUtil();
-	App.Utilities.lazyLoad();
-
-	TypeAnimationUtil();
+	App.Main.animate();
 
 };
