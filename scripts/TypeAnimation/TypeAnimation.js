@@ -45,9 +45,8 @@ function TypeAnimation(element, property) {
                 }
             },
             remove: function(){
-
                 const child = public.element.querySelector('#type_indicator');
-                public.element.removeChild(child);
+                if(child) public.element.removeChild(child);
             }
         }
     }();
