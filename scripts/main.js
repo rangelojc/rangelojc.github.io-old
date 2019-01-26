@@ -43,7 +43,7 @@ App.Main = function () {
 			component.open(url);
 		}
 		else if (response != pw) {
-			alert("You are not authorized to view this file. You can try hacking it, it's absurdly simple and improvised. :-P");
+			alert("You are not allowed to view this file. You can try hacking it, it's absurdly simple and improvised. 😋");
 		}
 	}
 
