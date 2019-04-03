@@ -112,12 +112,11 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-start;
-    border-bottom: 1px solid #d5d5d5;
-    padding: 50px 0;
     text-align: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     height: auto;
+    margin: 50px 0 0 0;
 }
 
 .content-title {
@@ -132,8 +131,12 @@ body {
     margin: 0 auto;
     width: 60%;
     color: #272727;
-    text-align: justify;
     font-size: 1em;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -159,7 +162,6 @@ body {
 }
 
 .profile-photo-img {
-    position: absolute;
     height: 100%;
     width: 100%;
 }
@@ -169,17 +171,25 @@ body {
 
 .tech-wrapper {
     height: auto;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.tech-separator{
+    height: 0px;
+    width: 60px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
 }
 
 .tech-wrapper-title {
-    margin: 50px 0 0 0;
     font-weight: 600;
-    text-align: center;
+    text-align: left;
     /* display: flex; */
 }
 
 .tech-wrapper-content{
-    padding: 20px;
+    padding: 20px 20px 0;
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -249,7 +259,7 @@ body {
 
     .tech-item{
         height: 80px;
-        width: 80px;
+        /* width: 80px; */
     }
 }
 
