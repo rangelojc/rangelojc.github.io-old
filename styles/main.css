@@ -248,7 +248,7 @@ body {
     .content-body {
         width: 90%;
         font-size: 14px;
-        text-indent: 20px;
+        /* text-indent: 20px; */
     }
     .profile-photo-wrapper {
         margin: 30px auto 30px auto;
