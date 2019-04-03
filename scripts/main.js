@@ -23,7 +23,7 @@ App.Main = function () {
 	}
 
 	component.setEvents = function () {
-		resume.onclick = function () { component.attemptGet("files/resume.pdf"); }
+		resume_button.onclick = function () { component.attemptGet("files/resume.pdf"); }
 	}
 
 	component.attemptGet = function (url) {
@@ -59,8 +59,8 @@ App.Main = function () {
 	}
 
 	component.animate = function () {
-		const animate1 = new TypeAnimation(sht_ramce, "innerHTML");
-		const animate2 = new TypeAnimation(sht_ramce2, "innerHTML");
+		const animate1 = new TypeAnimation(document.querySelector(".hero-text.main"), "innerHTML");
+		const animate2 = new TypeAnimation(document.querySelector(".hero-text.sub"), "innerHTML");
 
 		const a1 = function () {
 			animate1.pauses = { 6: 400, 16: 400 }
@@ -118,15 +118,15 @@ App.Social = function () {
 		sfb.onmouseleave = function (evt) { component.hover(this, false, evt); };
 		sfb.onmouseup = function (evt) { component.hover(this, false, evt); };
 
-		stw.onclick = function () { component.openURL('https://www.twitter.com/ramceangelo'); };
-		stw.onmouseover = function (evt) { component.hover(this, true, evt); };
-		stw.onmouseleave = function (evt) { component.hover(this, false, evt); };
-		stw.onmouseup = function (evt) { component.hover(this, false, evt); };
-
 		sig.onclick = function () { component.openURL('https://www.instagram.com/ramceangelo_/'); };
 		sig.onmouseover = function (evt) { component.hover(this, true, evt); };
 		sig.onmouseleave = function (evt) { component.hover(this, false, evt); };
 		sig.onmouseup = function (evt) { component.hover(this, false, evt); };
+
+		sgl.onclick = function () { component.openURL('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ramuzuconcepcion@gmail.com'); };
+		sgl.onmouseover = function (evt) { component.hover(this, true, evt); };
+		sgl.onmouseleave = function (evt) { component.hover(this, false, evt); };
+		sgl.onmouseup = function (evt) { component.hover(this, false, evt); };
 	}
 
 	return component;

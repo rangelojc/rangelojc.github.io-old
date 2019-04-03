@@ -107,14 +107,17 @@
     font-size: 0.5em;
 }
 
-#social{		
-	height: auto; width: 100%;	
-    text-align: left;
-    
-    margin: 5px 0;
+.social-media-wrapper{		
+    height: auto; width: 100%;	  
+    padding: 10px 0;  
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.socialimg {
+.social-media-img {
 	display: inline-block;
 	vertical-align: middle;
 	height: 40px; width: 40px;
@@ -128,7 +131,7 @@
 	-webkit-transition: 200ms ease;
 }
 
-.socialimg img{
+.social-media-img img{
 	height: 100%;
 }
 
@@ -142,11 +145,11 @@
         width: 90%;
     }
 
-    #social{
+    .social-media-wrapper{
 		top: 320px;
 	}
 
-	.socialimg {
+	.social-media-img {
 		margin: 0px;
 	}
 }

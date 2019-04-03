@@ -1,0 +1,21 @@
+
+
+/*WEBKIT SCROLLBARS ONLY*/
+
+::-webkit-scrollbar {
+	width: 4px;
+	height: 6px;
+	margin-left: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #404040;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #404040;
+	color: rgba(131, 160, 226, 0.8);
+}
