@@ -1,4 +1,23 @@
+/*SELECTION*/
+*::selection {
+    background-color: #095aa5;
+	color:#fff;
+}
 
+*::-moz-selection {
+	background-color: #095aa5;
+	color:#fff;
+}
+
+*::-webkit-selection {
+	background-color: #095aa5;
+	color:#fff;
+}
+
+*::-ms-selection {
+    background-color: #095aa5;
+	color:#fff;
+}
 
 /*WEBKIT SCROLLBARS ONLY*/
 

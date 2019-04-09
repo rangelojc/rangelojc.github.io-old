@@ -27,7 +27,7 @@ App.Main = function () {
 	}
 
 	component.attemptGet = function (url) {
-		const response = prompt("File restricted. You can ask me for the password. Please enter a password: ");
+		const response = prompt("File restricted. You can ask me for the password. Please enter password: ");
 
 		const attrs = ['enca', 'encb', 'encc'];
 		const el1 = document.querySelector('[' + attrs[0] + ']');
@@ -38,13 +38,9 @@ App.Main = function () {
 			el2.getAttribute(attrs[1]).replace(/_/g, '') +
 			el3.getAttribute(attrs[2]).replace(/_/g, '');
 
-		if (response == null) { return; }
-		else if (response == pw) {
-			component.open(url);
-		}
-		else if (response != pw) {
-			alert("You are not allowed to view this file. You can try hacking it, it's absurdly simple and improvised. 😋");
-		}
+		if (!response) return;
+		else if (response == pw) component.open(url);
+		else if (response != pw)alert("You are not allowed to view this file. You can try hacking it, it's absurdly simple and improvised. 😋");
 	}
 
 	component.lazyLoad = function () {
@@ -59,8 +55,8 @@ App.Main = function () {
 	}
 
 	component.animate = function () {
-		const animate1 = new TypeAnimation(document.querySelector(".hero-text.main"), "innerHTML");
-		const animate2 = new TypeAnimation(document.querySelector(".hero-text.sub"), "innerHTML");
+		const animate1 = TypeAnimation(document.querySelector(".hero-text.main"), "innerHTML");
+		const animate2 = TypeAnimation(document.querySelector(".hero-text.sub"), "innerHTML");
 
 		const a1 = function () {
 			animate1.pauses = { 6: 400, 16: 400 }
@@ -73,8 +69,8 @@ App.Main = function () {
 			animate2.start();
 			animate2.after = function () {
 				a1();
-				sht_ramce.innerHTML = "";
-				sht_ramce2.innerHTML = "";
+				document.querySelector('.hero-text.main').innerHTML = "";
+				document.querySelector('.hero-text.sub').innerHTML = "";
 			}
 		}
 
@@ -88,8 +84,7 @@ App.Footer = function () {
 	const footer = {};
 
 	footer.setDate = function () {
-		let year = new Date().getFullYear();
-		copyright_date.innerHTML = "Ramce Concepcion &copy; " + year;
+		copyright_date.innerHTML = "Ramce Concepcion &copy; " + new Date().getFullYear();
 	}
 
 	return footer;
