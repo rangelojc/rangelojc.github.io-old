@@ -138,10 +138,17 @@ body {
     align-items: center;
 }
 
-
 /**/
 
-.profile-photo-wrapper {
+.intro-body{
+    display: block;
+}
+
+.intro-paragraph {
+    text-align: justify;
+}
+
+.intro-photo-wrapper {
     position: relative;
     margin: 50px auto 50px auto;
     height: 400px;
@@ -155,7 +162,7 @@ body {
     justify-content: center;
 }
 
-.profile-photo-filter {
+.intro-photo-filter {
     position: absolute;
     z-index: 2;
     height: 100%;
@@ -163,7 +170,7 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.profile-photo-img {
+.intro-photo-img {
     height: 100%;
     width: 100%;
 }
@@ -249,12 +256,12 @@ body {
         font-size: 14px;
         /* text-indent: 20px; */
     }
-    .profile-photo-wrapper {
+    .intro-photo-wrapper {
         margin: 30px auto 30px auto;
         height: 250px;
         width: 250px;
     }
-    .profile-photo-img {
+    .intro-photo-img {
         height: 250px;
         width: 250px;
     }
