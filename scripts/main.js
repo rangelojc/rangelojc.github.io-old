@@ -9,7 +9,7 @@ App.Main = function () {
         window.addEventListener('scroll', function () {
             const sliderW = coverdiv.getBoundingClientRect().width;
             if (sliderW < 900) cover.style.transform = "translateY(0)";
-            else cover.style.transform = "translateY(" + (window.scrollY - (window.scrollY * 0)) + "px)";
+            else cover.style.transform = "translateY(" + (window.scrollY - (window.scrollY * 1.2)) + "px)";
         });
     }
 
@@ -40,7 +40,7 @@ App.Main = function () {
 
         if (!response) return;
         else if (response == pw) component.open(url);
-        else if (response != pw) alert("You are not allowed to view this file. You can try hacking it, it's absurdly simple and improvised. 😋");
+        else if (response != pw) alert("You are not allowed to view this file, at least not directly. You can try deciphering the password by looking at this site's unobfuscated source code, it's absurdly simple and improvised.");
     }
 
     component.lazyLoad = function () {
