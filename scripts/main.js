@@ -77,6 +77,13 @@ App.Main = function () {
         a1();
     }
 
+    component.init = function () {
+        component.applyParallax();
+        component.setEvents();
+        component.lazyLoad();
+        component.animate();
+    }
+
     return component;
 }();
 
@@ -87,53 +94,28 @@ App.Footer = function () {
         copyright_date.innerHTML = "Ramce Concepcion &copy; " + new Date().getFullYear();
     }
 
-    return footer;
-}();
-
-App.Social = function () {
-    const component = {}
-
-    component.openURL = function (url) {
+    footer.openURL = function (url) {
         const win = window.open(url, '_blank');
         win.focus();
     }
 
-    component.hover = function (el, action, evt) {
-        switch (action) {
-            case true: el.style.opacity = 1; break;
-            case false: el.style.opacity = 0.8; break;
-        }
-
-        evt.preventDefault();
+    footer.setEvents = function () {
+        sfb.onclick = function () { footer.openURL('https://www.facebook.com/ramceconcepcion'); };
+        sig.onclick = function () { footer.openURL('https://www.instagram.com/rangelojc/'); };
+        sgl.onclick = function () { footer.openURL('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ramuzuconcepcion@gmail.com'); };
+        sgh.onclick = function () { footer.openURL('https://github.com/ramceconcepcion'); };
+        sli.onclick = function () { footer.openURL('https://linkedin.com/in/ramceconcepcion'); };
     }
 
-    component.setEvents = function () {
-        sfb.onclick = function () { component.openURL('https://www.facebook.com/ramceconcepcion'); };
-        sfb.onmouseover = function (evt) { component.hover(this, true, evt); };
-        sfb.onmouseleave = function (evt) { component.hover(this, false, evt); };
-        sfb.onmouseup = function (evt) { component.hover(this, false, evt); };
-
-        sig.onclick = function () { component.openURL('https://www.instagram.com/ramceangelo_/'); };
-        sig.onmouseover = function (evt) { component.hover(this, true, evt); };
-        sig.onmouseleave = function (evt) { component.hover(this, false, evt); };
-        sig.onmouseup = function (evt) { component.hover(this, false, evt); };
-
-        sgl.onclick = function () { component.openURL('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ramuzuconcepcion@gmail.com'); };
-        sgl.onmouseover = function (evt) { component.hover(this, true, evt); };
-        sgl.onmouseleave = function (evt) { component.hover(this, false, evt); };
-        sgl.onmouseup = function (evt) { component.hover(this, false, evt); };
+    footer.init = function () {
+        footer.setEvents();
+        footer.setDate();
     }
 
-    return component;
+    return footer;
 }();
 
 window.onload = function () {
-    App.Main.applyParallax();
-    App.Main.setEvents();
-    App.Main.lazyLoad();
-
-    App.Footer.setDate();
-    App.Social.setEvents();
-
-    App.Main.animate();
+    App.Footer.init();
+    App.Main.init();
 };
