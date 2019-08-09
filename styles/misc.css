@@ -1,40 +1,43 @@
 /*SELECTION*/
 *::selection {
     background-color: #095aa5;
-	color:#fff;
+    color: #fff;
 }
 
 *::-moz-selection {
-	background-color: #095aa5;
-	color:#fff;
+    background-color: #095aa5;
+    color: #fff;
 }
 
 *::-webkit-selection {
-	background-color: #095aa5;
-	color:#fff;
+    background-color: #095aa5;
+    color: #fff;
 }
 
 *::-ms-selection {
     background-color: #095aa5;
-	color:#fff;
+    color: #fff;
 }
 
 /*WEBKIT SCROLLBARS ONLY*/
 
 ::-webkit-scrollbar {
-	width: 4px;
-	height: 6px;
-	margin-left: 4px;
+    width: 4px;
+    height: 6px;
+    margin-left: 4px;
 }
 
 ::-webkit-scrollbar-track {
-	background: transparent;
+    background: transparent;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #404040;
+    background: #686868;
 }
+
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: #404040;
-	color: rgba(131, 160, 226, 0.8);
+    background: #686868;
 }

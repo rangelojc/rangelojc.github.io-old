@@ -4,6 +4,8 @@ body {
     font-family: 'Muli', sans-serif;
     font-size: 20px;
     background-color: #f7f7f7;
+    width: 100vw;
+    height: auto;
 }
 
 .lazy[data-src] {
@@ -140,6 +142,9 @@ body {
 
 .content-body.tech {
     margin: 20px auto 0 auto;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 /**/
@@ -184,7 +189,7 @@ body {
 
 .tech-wrapper {
     height: auto;
-    width: 100%;
+    width: 50%;
     margin: 20px 0;
 }
 
