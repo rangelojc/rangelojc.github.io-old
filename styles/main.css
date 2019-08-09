@@ -138,6 +138,10 @@ body {
     align-items: center;
 }
 
+.content-body.tech {
+    margin: 20px auto 0 auto;
+}
+
 /**/
 
 .intro-body {
@@ -184,17 +188,18 @@ body {
     margin: 20px 0;
 }
 
-/* .tech-separator {
+.tech-separator {
     height: 0px;
     width: 60px;
-    border-bottom: 1px solid #ccc;
     margin: 0 auto;
-} */
+    /* border-bottom: 1px solid #e4e4e4; */
+}
 
 .tech-wrapper-title {
     font-weight: 600;
     text-align: left;
     /* display: flex; */
+    font-size: 1.2em;
 }
 
 .tech-wrapper-content {
@@ -277,6 +282,14 @@ body {
     .intro-photo-img {
         height: 250px;
         width: 250px;
+    }
+
+    .tech-wrapper-title {
+        text-align: center;
+    }
+
+    .tech-wrapper-content {
+        justify-content: center;
     }
 
     .tech-item {
