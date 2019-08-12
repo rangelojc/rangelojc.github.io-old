@@ -72,7 +72,8 @@ App.Main = function () {
                 document.querySelector('.hero-text.main').innerHTML = "";
                 document.querySelector('.hero-text.sub').innerHTML = "";
             }
-        }
+        };
+
 
         a1();
     }
@@ -86,6 +87,12 @@ App.Main = function () {
 
     return component;
 }();
+
+App.Gallery = function () {
+    const gallery = {};
+
+    return gallery;
+}
 
 App.Footer = function () {
     const footer = {};
