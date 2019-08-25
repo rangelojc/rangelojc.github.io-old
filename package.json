@@ -2,7 +2,7 @@
     "name": "ramceconcepcion.github.io",
     "version": "2.0.0",
     "description": "Personal website of Ramce Concepcion",
-    "main": "main.js",
+    "main": "app.js",
     "dependencies": {
         "@babel/polyfill": "^7.4.0",
         "core-js": "^3.0.1",

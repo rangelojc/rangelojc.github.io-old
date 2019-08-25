@@ -5,11 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: Path.resolve(__dirname, '../src/scripts/main.js')
+        app: Path.resolve(__dirname, '../src/scripts/app.js')
     },
     output: {
         path: Path.join(__dirname, '../docs'),
-        filename: 'js/[name].js'
+        filename: 'scripts/[name].js'
     },
     optimization: {
         splitChunks: {
@@ -35,11 +35,10 @@ module.exports = {
         }]),
 
         //SEO
-        new HtmlWebpackPlugin({
-            filename: "googleb64fcb9a8d463f38.html",
-            template: Path.resolve(__dirname, '../src/googleb64fcb9a8d463f38.html'),
-            minify: false
-        }),
+        new CopyWebpackPlugin([{
+            from: Path.resolve(__dirname, '../src/googleb64fcb9a8d463f38.html'),
+            to: "googleb64fcb9a8d463f38.html",
+        }]),
 
         //Pages
         new HtmlWebpackPlugin({

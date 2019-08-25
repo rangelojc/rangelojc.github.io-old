@@ -122,7 +122,4 @@ App.Footer = function () {
     return footer;
 }();
 
-window.onload = function () {
-    App.Footer.init();
-    App.Main.init();
-};
+export default App;
