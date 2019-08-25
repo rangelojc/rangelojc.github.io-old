@@ -1,5 +1,11 @@
 import '../styles/main.scss';
-import App from '../scripts/main';
+import Footer from '../scripts/components/footer.js';
+import Main from '../scripts/components/main.js';
+
+const App = {
+    Main,
+    Footer
+};
 
 window.onload = function () {
     App.Footer.init();
