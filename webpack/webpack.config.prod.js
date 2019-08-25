@@ -23,9 +23,9 @@ module.exports = merge(common, {
         new MiniCssExtractPlugin({
             filename: 'styles/styles.css'
         }),
-        new CnameWebpackPlugin({
-            domain: 'ramceconcepcion.tk',
-        }),
+        // new CnameWebpackPlugin({
+        //     domain: 'ramceconcepcion.tk',
+        // }),
     ],
     module: {
         rules: [{

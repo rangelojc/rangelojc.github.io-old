@@ -35,10 +35,10 @@ module.exports = {
         }]),
 
         //SEO
-        new CopyWebpackPlugin([{
-            from: Path.resolve(__dirname, '../src/googleb64fcb9a8d463f38.html'),
-            to: "googleb64fcb9a8d463f38.html",
-        }]),
+        // new CopyWebpackPlugin([{
+        //     from: Path.resolve(__dirname, '../src/googleb64fcb9a8d463f38.html'),
+        //     to: "googleb64fcb9a8d463f38.html",
+        // }]),
 
         //Pages
         new HtmlWebpackPlugin({
