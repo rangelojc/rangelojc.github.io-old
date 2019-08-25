@@ -34,12 +34,7 @@ module.exports = {
             to: 'scripts'
         }]),
 
-        //SEO and Domain CNAME
-        new HtmlWebpackPlugin({
-            filename: "CNAME",
-            template: Path.resolve(__dirname, '../src/CNAME'),
-            minify: false
-        }),
+        //SEO
         new HtmlWebpackPlugin({
             filename: "googleb64fcb9a8d463f38.html",
             template: Path.resolve(__dirname, '../src/googleb64fcb9a8d463f38.html'),
