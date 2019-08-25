@@ -20,7 +20,7 @@ module.exports = merge(common, {
         }),
         new Webpack.optimize.ModuleConcatenationPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'styles/app.css'
+            filename: 'styles/styles.css'
         })
     ],
     module: {

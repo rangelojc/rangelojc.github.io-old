@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: Path.resolve(__dirname, '../src/scripts/index.js')
+        app: Path.resolve(__dirname, '../src/scripts/main.js')
     },
     output: {
         path: Path.join(__dirname, '../docs'),
@@ -19,6 +19,8 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+
+        //Folders
         new CopyWebpackPlugin([{
             from: Path.resolve(__dirname, '../src/files'),
             to: 'files'
@@ -31,11 +33,25 @@ module.exports = {
             from: Path.resolve(__dirname, '../src/scripts'),
             to: 'scripts'
         }]),
+
+        //SEO and Domain CNAME
         new HtmlWebpackPlugin({
-            title: 'With Handlebars Template Engine',
+            filename: "CNAME",
+            template: Path.resolve(__dirname, '../src/CNAME'),
+            minify: false
+        }),
+        new HtmlWebpackPlugin({
+            filename: "googleb64fcb9a8d463f38.html",
+            template: Path.resolve(__dirname, '../src/googleb64fcb9a8d463f38.html'),
+            minify: false
+        }),
+
+        //Pages
+        new HtmlWebpackPlugin({
             template: Path.resolve(__dirname, '../src/index.hbs'),
             minify: false
         }),
+
 
         // new HtmlWebpackPlugin({
         //     title: 'Login',
