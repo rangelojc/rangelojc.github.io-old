@@ -43,4 +43,19 @@
             height: 350px;
         }
     }
+
+    @include mQueryGeneral {
+        .gallery-wrapper {
+            /* max-height: 500px; */
+        }
+
+        .gallery-item {
+            width: 40%;
+        }
+
+        .gallery-item.max-width {
+            width: 100%;
+            height: 200px;
+        }
+    }
 }

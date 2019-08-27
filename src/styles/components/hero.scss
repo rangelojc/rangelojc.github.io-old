@@ -75,4 +75,49 @@
             }
         }
     }
+
+    @include mQueryGeneral {
+        .hero-text {
+            height: 50px;
+            width: 100%;
+        }
+
+        .hero-text.main {
+            font-size: 1.2em;
+            margin: 0px 0 5px 0;
+            height: auto;
+        }
+
+        .hero-text.sub {
+            font-size: 0.8em;
+        }
+
+        #resume_button {
+            height: 50px;
+            width: 200px;
+            font-size: 0.8em;
+        }
+
+        #cover {
+            margin-top: 0px;
+            height: 120%;
+            width: auto;
+        }
+    }
+
+    @include mQueryTablet {
+        &.r1024x768 {
+            #cover {
+                margin-top: 0px;
+                width: 150%;
+            }
+        }
+
+        &.r1366x1024 {
+            #cover {
+                margin-top: 0px;
+                width: 150%;
+            }
+        }
+    }
 }

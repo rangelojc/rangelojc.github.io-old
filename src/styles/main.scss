@@ -1,45 +1,61 @@
 @import 'misc/misc';
 @import 'mixins/mixins';
 @import 'components/components';
-
 @import 'footer';
 
 /*******************************/
 
 .intro-body {
     display: block;
+
+    .intro-paragraph {
+        text-align: justify;
+    }
+
+
+    .intro-photo-wrapper {
+        position: relative;
+        margin: 50px auto 50px auto;
+        height: 400px;
+        width: 400px;
+        overflow: hidden;
+        border: 10px solid lightGray;
+        border-radius: 100%;
+        background-color: #cacaca;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+
+
+        .intro-photo-filter {
+            position: absolute;
+            z-index: 2;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-photo-img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    @include mQueryGeneral {
+        .intro-photo-wrapper {
+            margin: 30px auto 30px auto;
+            height: 250px;
+            width: 250px;
+        }
+
+        .intro-photo-img {
+            height: 250px;
+            width: 250px;
+        }
+    }
+
 }
 
-.intro-paragraph {
-    text-align: justify;
-}
-
-.intro-photo-wrapper {
-    position: relative;
-    margin: 50px auto 50px auto;
-    height: 400px;
-    width: 400px;
-    overflow: hidden;
-    border: 10px solid lightGray;
-    border-radius: 100%;
-    background-color: #cacaca;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-}
-
-.intro-photo-filter {
-    position: absolute;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.intro-photo-img {
-    height: 100%;
-    width: 100%;
-}
 
 
 /**********************/
@@ -103,127 +119,19 @@
 
         }
     }
-}
 
+    @include mQueryGeneral {
+        .tech-wrapper-title {
+            text-align: center;
+        }
 
-/*****************************************************************/
+        .tech-wrapper-content {
+            justify-content: center;
+        }
 
-
-
-/*************************GENERAL MOBILE MEDIA********************/
-
-@media only screen and (max-width: 1000px) {
-    .hero-text {
-        height: 50px;
-        width: 100%;
-    }
-
-    .hero-text.main {
-        font-size: 1.2em;
-        margin: 0px 0 5px 0;
-        height: auto;
-    }
-
-    .hero-text.sub {
-        font-size: 0.8em;
-    }
-
-    #resume_button {
-        height: 50px;
-        width: 200px;
-        font-size: 0.8em;
-    }
-
-    #cover {
-        margin-top: 0px;
-        height: 120%;
-        width: auto;
-    }
-
-    .content-title {
-        font-size: 1.2em;
-    }
-
-    .content-body {
-        width: 90%;
-        font-size: 14px;
-        /* text-indent: 20px; */
-    }
-
-    .intro-photo-wrapper {
-        margin: 30px auto 30px auto;
-        height: 250px;
-        width: 250px;
-    }
-
-    .intro-photo-img {
-        height: 250px;
-        width: 250px;
-    }
-
-    .tech-wrapper-title {
-        text-align: center;
-    }
-
-    .tech-wrapper-content {
-        justify-content: center;
-    }
-
-    .tech-item {
-        height: 80px;
-        /* width: 80px; */
-    }
-
-    .gallery-wrapper {
-        /* max-height: 500px; */
-    }
-
-    .gallery-item {
-        width: 40%;
-    }
-
-    .gallery-item.max-width {
-        width: 100%;
-        height: 200px;
-    }
-}
-
-
-/*************************IPAD OR TABLET SPECIFICS********************/
-
-@media screen and (width: 1024px) and (height: 768px) {
-    #cover {
-        margin-top: 0px;
-        width: 150%;
-    }
-}
-
-@media screen and (width: 1366px) and (height: 1024px) {
-    #cover {
-        margin-top: 0px;
-        width: 150%;
-    }
-}
-
-@media screen and (height: 1366px) and (width: 1024px) {
-    #cover {
-        margin-top: 0px;
-        width: 150%;
-    }
-}
-
-
-/******************MOBILE PHONE SPECIFICS******************/
-
-@media screen and (max-width: 1025px) and (orientation: portrait) and (max-height: 750px) {}
-
-@media screen and (max-width: 1025px) and (orientation: landscape) and (max-height: 750px) {}
-
-
-/***FALLBACKS**/
-
-@media only screen and (max-width: 350px) {
-    #cover {
-        width: 200%;
+        .tech-item {
+            height: 80px;
+            /* width: 80px; */
+        }
     }
 }
