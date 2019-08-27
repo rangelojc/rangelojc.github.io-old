@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    background-color: #f7f7f7;
+    width: 100vw;
+    height: auto;
+}
+
+.lazy[data-src] {
+    opacity: 0;
+}
+
+.lazy {
+    opacity: 1;
+    transition: opacity 300ms ease;
+    -webkit-transition: opacity 300ms ease;
+    -ms-transition: opacity 300ms ease;
+}
+
+.display-none {
+    display: none !important;
+}
+
+/*******************************/
+
+.app {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}

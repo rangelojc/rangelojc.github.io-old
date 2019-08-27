@@ -1,0 +1,32 @@
+.content-panel {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    min-height: 80vh;
+    height: auto;
+    margin: 50px 0 0 0;
+
+
+    .content-title {
+        color: #272727;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .content-body {
+        margin: 0 auto;
+        width: 60%;
+        color: #272727;
+        font-size: 1em;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

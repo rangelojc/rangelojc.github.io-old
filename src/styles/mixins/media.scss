@@ -1,0 +1,7 @@
+@mixin mQueryGeneral($width, $height, $orientation) {}
+
+@mixin mQueryTablet($width, $height, $orientation) {}
+
+@mixin mQueryPhone($width, $height, $orientation) {}
+
+@mixin mQueryFallback($width, $height, $orientation) {}
