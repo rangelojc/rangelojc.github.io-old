@@ -4,32 +4,39 @@
     }
 }
 
-@mixin mQueryTablet {
-    &.r1024x768 {
-        @media screen and (width: 1024px) and (height: 768px) {
-            @content;
-        }
-    }
-
-    &.r1366x1024 {
-        @media screen and (width: 1366px) and (height: 1024px) {
-            @content;
-        }
+@mixin mQueryTablet1L {
+    @media screen and (width: 1024px) and (height: 768px) {
+        @content;
     }
 }
 
-@mixin mQueryPhone {
-
-    &.portrait {
-        @media screen and (max-width: 1025px) and (orientation: portrait) and (max-height: 750px) {
-            @content;
-        }
+@mixin mQueryTablet1P {
+    @media screen and (width: 768px) and (height: 1024px) {
+        @content;
     }
+}
 
-    &.landscape {
-        @media screen and (max-width: 1025px) and (orientation: landscape) and (max-height: 750px) {
-            @content;
-        }
+@mixin mQueryTablet2L {
+    @media screen and (width: 1366px) and (height: 1024px) {
+        @content;
+    }
+}
+
+@mixin mQueryTablet2P {
+    @media screen and (width: 1024px) and (height: 1366px) {
+        @content;
+    }
+}
+
+@mixin mQueryPhone1 {
+    @media screen and (max-width: 1025px) and (orientation: portrait) and (max-height: 750px) {
+        @content;
+    }
+}
+
+@mixin mQueryPhone2 {
+    @media screen and (max-width: 1025px) and (orientation: landscape) and (max-height: 750px) {
+        @content;
     }
 }
 

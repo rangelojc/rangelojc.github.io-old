@@ -21,7 +21,7 @@ module.exports = merge(common, {
         }),
         new Webpack.optimize.ModuleConcatenationPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'styles/styles.css'
+            filename: 'styles/styles.css',
         }),
         // new CnameWebpackPlugin({
         //     domain: 'ramceconcepcion.tk',
@@ -37,7 +37,13 @@ module.exports = merge(common, {
             test: /\.s?css/i,
             use: [
                 MiniCssExtractPlugin.loader,
-                'css-loader',
+                {
+                    loader: "css-loader",
+                    options: {
+                        modules: false,
+                        sourceMap: true,
+                    }
+                },
                 'sass-loader'
             ]
         }

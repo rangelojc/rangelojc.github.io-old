@@ -78,46 +78,60 @@
 
     @include mQueryGeneral {
         .hero-text {
-            height: 50px;
-            width: 100%;
+            height: 50px !important;
+            width: 100% !important;
         }
 
         .hero-text.main {
-            font-size: 1.2em;
-            margin: 0px 0 5px 0;
-            height: auto;
+            font-size: 1.2em !important;
+            margin: 0px 0 5px 0 !important;
+            height: auto !important;
         }
 
         .hero-text.sub {
-            font-size: 0.8em;
+            font-size: 0.8em !important;
         }
 
         #resume_button {
-            height: 50px;
-            width: 200px;
-            font-size: 0.8em;
+            height: 50px !important;
+            width: 200px !important;
+            font-size: 0.8em !important;
         }
 
         #cover {
-            margin-top: 0px;
-            height: 120%;
-            width: auto;
+            margin-top: 0px !important;
+            height: 120% !important;
+            width: auto !important;
         }
     }
 
-    @include mQueryTablet {
-        &.r1024x768 {
-            #cover {
-                margin-top: 0px;
-                width: 150%;
-            }
+    @include mQueryTablet1L {
+        #cover {
+            margin-top: 0px;
+            width: 150%;
         }
+    }
 
-        &.r1366x1024 {
-            #cover {
-                margin-top: 0px;
-                width: 150%;
-            }
+    @include mQueryTablet1P {
+        #cover {
+            margin-top: 0px;
+            width: auto !important;
+            height: 150%;
+        }
+    }
+
+    @include mQueryTablet2P {
+        #cover {
+            margin-top: 0px;
+            width: auto !important;
+            height: 150%;
+        }
+    }
+
+    @include mQueryTablet2L {
+        #cover {
+            margin-top: 0px;
+            width: 150%;
         }
     }
 }
