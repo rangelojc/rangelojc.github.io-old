@@ -77,7 +77,7 @@ const Main = function () {
     }
 
     component.init = function () {
-        component.applyParallax();
+        //component.applyParallax();
         component.setEvents();
         component.lazyLoad();
         component.animate();
