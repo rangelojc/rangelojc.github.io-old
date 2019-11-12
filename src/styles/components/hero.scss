@@ -26,7 +26,6 @@
         overflow: hidden;
 
 
-
         .hero-text {
             color: #fdfdfd;
             text-align: center;
@@ -40,7 +39,7 @@
             }
 
             &.sub {
-                font-size: 1em;
+                font-size: 1.2em;
                 font-weight: lighter;
             }
         }
@@ -50,7 +49,7 @@
             width: 100%;
             height: auto;
             text-align: center;
-
+            margin-top: 10px;
 
             #resume_button {
                 border: 2px solid #fdfdfd;
@@ -90,6 +89,10 @@
 
         .hero-text.sub {
             font-size: 0.8em !important;
+        }
+
+        .resume-button-wrapper {
+            margin: 0 !important;
         }
 
         #resume_button {

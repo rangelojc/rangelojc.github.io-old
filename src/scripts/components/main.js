@@ -53,27 +53,34 @@ const Main = function () {
     }
 
     component.animate = function () {
-        const animate1 = TypeAnimation(document.querySelector(".hero-text.main"), "innerHTML");
-        const animate2 = TypeAnimation(document.querySelector(".hero-text.sub"), "innerHTML");
-
-        const a1 = function () {
-            animate1.pauses = { 6: 400, 16: 400 }
-            animate1.start();
-            animate1.after = a2;
+        var typed1 = function () {
+            new Typed('.hero-text.main', {
+                strings: ["RAMCE CONCEPCION"],
+                typeSpeed: 50,
+                onComplete: typed2,
+                showCursor: false
+            });
         }
 
-        const a2 = function () {
-            animate2.pauses = { 33: 10000 }
-            animate2.start();
-            animate2.after = function () {
-                a1();
-                document.querySelector('.hero-text.main').innerHTML = "";
-                document.querySelector('.hero-text.sub').innerHTML = "";
-            }
-        };
+        var typed2 = function () {
+            new Typed('.hero-text.sub', {
+                strings: ["WEB DEVELOPER^500",
+                    "SOFTWARE ENGINEER^500",
+                    "GAMER^500",
+                    "PC HARDWARE HOBBYIST^500",
+                    "ASPIRING CAR HOBBYIST^500",
+                    "FOOD LOVER^500",
+                    "TRAVEL BUDDY^500",
+                    "LOVES CRAB STICKS^500",
+                    "LOVES POTATO SALAD EVEN MORE^500"],
+                typeSpeed: 50,
+                loop: true,
+                loopCount: 100,
+                showCursor: false
+            })
+        }
 
-
-        a1();
+        typed1();
     }
 
     component.init = function () {
