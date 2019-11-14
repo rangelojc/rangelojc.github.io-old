@@ -2,7 +2,7 @@ My personal website hosted on GitHub Pages.
 
 Install dependencies
 
-````````````
+```````````
 npm install
 ```````````
 
