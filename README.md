@@ -1,12 +1,18 @@
 My personal website hosted on GitHub Pages.
 
-Start dev server with:
+Install dependencies
+
+````````````
+npm install
+```````````
+
+Start dev server
 
 ````````````
 npm run start
 ````````````
 
-Compile with:
+Compile
 
 ````````````
 npm run build
