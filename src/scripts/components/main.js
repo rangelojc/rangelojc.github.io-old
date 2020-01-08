@@ -65,14 +65,7 @@ const Main = function () {
         var typed2 = function () {
             new Typed('.hero-text.sub', {
                 strings: ["WEB DEVELOPER^500",
-                    "SOFTWARE ENGINEER^500",
-                    "GAMER^500",
-                    "PC HARDWARE HOBBYIST^500",
-                    "ASPIRING CAR HOBBYIST^500",
-                    "FOOD LOVER^500",
-                    "TRAVEL BUDDY^500",
-                    "LOVES CRAB STICKS^500",
-                    "LOVES POTATO SALAD EVEN MORE^500"],
+                    "SOFTWARE ENGINEER^500"],
                 typeSpeed: 50,
                 loop: true,
                 loopCount: 100,
