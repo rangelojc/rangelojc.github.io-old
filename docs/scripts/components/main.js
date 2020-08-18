@@ -1,3 +1,6 @@
+const RES_PATH = btoa("files/resume.pdf");
+const RES_PASW = btoa("you got me");
+
 const Main = function () {
     const component = {};
 
@@ -21,24 +24,19 @@ const Main = function () {
     }
 
     component.setEvents = function () {
-        resume_button.onclick = function () { component.attemptGet("files/resume.pdf"); }
+        resume_button.onclick = function () { component.attemptGet(atob(RES_PATH)); }
     }
 
     component.attemptGet = function (url) {
         const response = prompt("File restricted. You can ask me for the password. Please enter password: ");
 
-        const attrs = ['enca', 'encb', 'encc'];
-        const el1 = document.querySelector('[' + attrs[0] + ']');
-        const el2 = document.querySelector('[' + attrs[1] + ']');
-        const el3 = document.querySelector('[' + attrs[2] + ']');
-        const pw =
-            el1.getAttribute(attrs[0]).replace(/_/g, '') +
-            el2.getAttribute(attrs[1]).replace(/_/g, '') +
-            el3.getAttribute(attrs[2]).replace(/_/g, '');
+        const constPw = atob(RES_PASW);
+
+        console.log(response, constPw);
 
         if (!response) return;
-        else if (response == pw) component.open(url);
-        else if (response != pw) alert("You are not allowed to view this file, at least not directly. You can try deciphering the password by looking at this site's unobfuscated source code, it's absurdly simple and improvised.");
+        else if (response === constPw) component.open(url);
+        else if (response !== constPw) alert("You are not allowed to view this file.");
     }
 
     component.lazyLoad = function () {
