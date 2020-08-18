@@ -30,13 +30,8 @@ const Main = function () {
     component.attemptGet = function (url) {
         const response = prompt("File restricted. You can ask me for the password. Please enter password: ");
 
-        const constPw = atob(RES_PASW);
-
-        console.log(response, constPw);
-
-        if (!response) return;
-        else if (response === constPw) component.open(url);
-        else if (response !== constPw) alert("You are not allowed to view this file.");
+        if (response === atob(RES_PASW)) component.open(url);
+        else if (response !== atob(RES_PASW)) alert("You are not allowed to view this file.");
     }
 
     component.lazyLoad = function () {
