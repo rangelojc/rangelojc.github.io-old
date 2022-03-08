@@ -5,17 +5,17 @@
         height: 100vh;
         overflow: hidden;
         background-color: #cacaca;
+        position: relative;
 
         #cover {
             width: 120%;
         }
     }
 
-
     .details-wrapper {
         display: flex;
         flex-flow: column nowrap;
-        align-items: center;
+        // align-items: center;
         justify-content: center;
         position: absolute;
         z-index: 1;
@@ -24,23 +24,33 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.6);
         overflow: hidden;
-
+        padding: 0 15%;
 
         .hero-text {
             color: #fdfdfd;
-            text-align: center;
             height: 50px;
             width: 100%;
             user-select: none;
 
             &.main {
                 font-size: 2.5em;
-                margin: 0px 0 30px 0;
+                margin: 0px 0 10px 0;
+                letter-spacing: -1px;
+
+                .name{
+                    color: $primary;
+                }
             }
 
             &.sub {
                 font-size: 1.2em;
                 font-weight: lighter;
+            }
+
+            &.desc{
+                font-size: 1em;
+                height: auto;
+                width: 500px;
             }
         }
 
@@ -48,27 +58,24 @@
         .resume-button-wrapper {
             width: 100%;
             height: auto;
-            text-align: center;
-            margin-top: 10px;
+            margin-top: 50px;
 
             #resume_button {
-                border: 2px solid #fdfdfd;
-                background-color: transparent;
+                border: 0;
+                background-color: $primary;
                 color: #fdfdfd;
                 font-size: 0.8em;
-                height: 60px;
-                width: 200px;
+                height: 50px;
+                width: 180px;
                 text-align: center;
                 cursor: pointer;
                 outline: none;
-                border-radius: 30px;
                 transition: 200ms ease;
                 -webkit-transition: 200ms ease;
                 -ms-transition: 200ms ease;
 
-
                 &:hover {
-                    background-color: rgba(255, 255, 255, 0.2);
+                    background-color: darken($primary, 10%);
                     border-radius: 0;
                 }
             }
@@ -76,8 +83,11 @@
     }
 
     @include mQueryGeneral {
+        .details-wrapper{
+            padding: 0 20px !important;
+        }
+
         .hero-text {
-            height: 50px !important;
             width: 100% !important;
         }
 
@@ -91,13 +101,19 @@
             font-size: 0.8em !important;
         }
 
+        .hero-text.desc {
+            font-size: 0.8em !important;
+            width: 100% !important;
+            max-width: 360px;
+        }
+
         .resume-button-wrapper {
-            margin: 0 !important;
+            margin: 20px 0 0 0 !important;
         }
 
         #resume_button {
-            height: 50px !important;
-            width: 200px !important;
+            height: 40px !important;
+            width: 150px !important;
             font-size: 0.8em !important;
         }
 
@@ -109,9 +125,13 @@
     }
 
     @include mQueryTablet1L {
+        .details-wrapper{
+            padding: 0 40px !important;
+        }
+
         #cover {
             margin-top: 0px;
-            width: 150%;
+            height: 120% !important;
         }
     }
 
@@ -134,7 +154,7 @@
     @include mQueryTablet2L {
         #cover {
             margin-top: 0px;
-            width: 150%;
+            height: 150%;
         }
     }
 }

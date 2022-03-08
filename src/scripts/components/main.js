@@ -1,5 +1,4 @@
-const RES_PATH = btoa("files/resume.pdf");
-const RES_PASW = btoa("you got me");
+const RES_PATH = ("files/resume.pdf");
 
 const Main = function () {
     const component = {};
@@ -24,14 +23,7 @@ const Main = function () {
     }
 
     component.setEvents = function () {
-        resume_button.onclick = function () { component.attemptGet(atob(RES_PATH)); }
-    }
-
-    component.attemptGet = function (url) {
-        const response = prompt("File restricted. You can ask me for the password. Please enter password: ");
-
-        if (response === atob(RES_PASW)) component.open(url);
-        else if (response !== atob(RES_PASW)) alert("You are not allowed to view this file.");
+        resume_button.onclick = function () { component.open(RES_PATH); }
     }
 
     component.lazyLoad = function () {
@@ -46,27 +38,19 @@ const Main = function () {
     }
 
     component.animate = function () {
-        var typed1 = function () {
-            new Typed('.hero-text.main', {
-                strings: ["RAMCE CONCEPCION"],
-                typeSpeed: 50,
-                onComplete: typed2,
-                showCursor: false
-            });
-        }
-
-        var typed2 = function () {
-            new Typed('.hero-text.sub', {
-                strings: ["WEB DEVELOPER^500",
-                    "SOFTWARE ENGINEER^500"],
-                typeSpeed: 50,
-                loop: true,
-                loopCount: 100,
-                showCursor: false
-            })
-        }
-
-        typed1();
+        new Typed('.hero-text.sub', {
+            strings: [
+                "WEB DEVELOPER^500",
+                "SOFTWARE DEVELOPER^500",
+                "CODE AUTHOR^500",
+                "COFFEE DRINKER^500",
+                "TEA SIPPER^500",
+            ],
+            typeSpeed: 50,
+            loop: true,
+            loopCount: 100,
+            showCursor: false
+        })
     }
 
     component.init = function () {

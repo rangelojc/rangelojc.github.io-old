@@ -13,7 +13,7 @@ const Footer = function () {
     footer.setEvents = function () {
         sfb.onclick = function () { footer.openURL('https://www.facebook.com/ramceconcepcion'); };
         sig.onclick = function () { footer.openURL('https://www.instagram.com/rangelojc/'); };
-        sgl.onclick = function () { footer.openURL('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ramuzuconcepcion@gmail.com'); };
+        sgl.onclick = function () { footer.openURL('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ramceconcepcion@gmail.com'); };
         sgh.onclick = function () { footer.openURL('https://github.com/rangelojc'); };
         sli.onclick = function () { footer.openURL('https://linkedin.com/in/ramceconcepcion'); };
     }
