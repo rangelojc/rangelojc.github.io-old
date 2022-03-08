@@ -40,11 +40,13 @@ const Main = function () {
     component.animate = function () {
         new Typed('.hero-text.sub', {
             strings: [
-                "WEB DEVELOPER^500",
-                "SOFTWARE DEVELOPER^500",
-                "CODE AUTHOR^500",
-                "COFFEE DRINKER^500",
-                "TEA SIPPER^500",
+                "A WEB DEVELOPER^500",
+                "A SOFTWARE DEVELOPER^500",
+                "A CODE AUTHOR^500",
+                "A COFFEE DRINKER^500",
+                "A TEA SIPPER^500",
+                "A VIDEO GAME ENJOYER^500",
+                "A PART-TIME SIM RACER AND VIRTUAL TRUCKER"
             ],
             typeSpeed: 50,
             loop: true,
