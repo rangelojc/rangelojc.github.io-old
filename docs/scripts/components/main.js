@@ -46,7 +46,8 @@ const Main = function () {
                 "A COFFEE DRINKER^500",
                 "A TEA SIPPER^500",
                 "A VIDEO GAME ENJOYER^500",
-                "A PART-TIME SIM RACER AND VIRTUAL TRUCKER"
+                "A PART-TIME SIM RACER^500",
+                "A PART-TIME VIRTUAL TRUCKER^500"
             ],
             typeSpeed: 50,
             loop: true,
