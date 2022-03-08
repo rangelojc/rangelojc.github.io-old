@@ -33,6 +33,10 @@ module.exports = {
             from: Path.resolve(__dirname, '../src/scripts'),
             to: 'scripts'
         }]),
+        new CopyWebpackPlugin([{
+            from: Path.resolve(__dirname, '../src/root'),
+            to: './'
+        }]),
 
         //SEO
         new CopyWebpackPlugin([{
