@@ -10,7 +10,6 @@
     margin: 50px 0 0 0;
 
     .content-title {
-        color: #272727;
         text-align: center;
         font-size: 2em;
         font-weight: bold;
@@ -20,13 +19,19 @@
     .content-body {
         margin: 0 auto;
         width: 60%;
-        color: #272727;
         font-size: 1em;
 
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+
+        .content-desc{
+            font-size: 1em;
+            margin: 10px 0 0 0;
+            width: 100%;
+            text-align: left;
+        }    
     }
 
     @include mQueryGeneral {
@@ -36,8 +41,137 @@
 
         .content-body {
             width: 90%;
-            font-size: 14px;
+            font-size: 0.8em;
             /* text-indent: 20px; */
+                        
+            .content-desc{
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+
+.content-body.tech {
+    margin: 20px auto 0 auto;
+
+    /* flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start; */
+
+    .tech-wrapper {
+        height: auto;
+        width: 100%;
+        margin: 20px 0;
+
+
+        .tech-separator {
+            height: 0px;
+            width: 60px;
+            margin: 0 auto;
+            /* border-bottom: 1px solid #e4e4e4; */
+        }
+
+        .tech-wrapper-title {
+            font-weight: 600;
+            text-align: left;
+            /* display: flex; */
+            font-size: 1.2em;
+        }
+
+        .tech-wrapper-content {
+            padding: 20px 20px 0;
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
+
+
+            .tech-item {
+                height: 100px;
+                width: auto;
+                margin: 20px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+
+
+                &.hidden {
+                    height: 0px;
+                    width: 1px;
+                }
+
+                >img {
+                    height: 100%;
+                }
+            }
+
+        }
+    }
+
+    @include mQueryGeneral {
+        .tech-wrapper-title {
+            text-align: center;
+        }
+
+        .tech-wrapper-content {
+            justify-content: center;
+        }
+
+        .tech-item {
+            height: 80px;
+            /* width: 80px; */
+        }
+    }
+}
+
+.content-body.projects {
+    /* flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start; */
+
+    .nanogallery-container{
+        height: auto;
+        width: 100%;
+        min-height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .project-wrapper {
+        height: auto;
+        width: 100%;
+        margin: 20px 0;
+
+        h2 {
+            font-weight: 600;
+            text-align: center;
+            /* display: flex; */
+            font-size: 1.2em;
+        }
+
+        .project-desc {
+            padding: 0px 0px 0;
+            margin: 0 0 10px;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    @include mQueryGeneral {
+        .tech-wrapper-title {
+            text-align: center;
+        }
+
+        .tech-wrapper-content {
+            justify-content: center;
+        }
+
+        .tech-item {
+            height: 80px;
+            /* width: 80px; */
         }
     }
 }

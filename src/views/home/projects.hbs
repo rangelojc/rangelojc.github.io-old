@@ -1,0 +1,82 @@
+<script>
+    $(document).ready(function () {
+        $("#gallery-tbx").nanogallery2({
+            thumbnailHeight: 300,
+            thumbnailWidth: 300,
+            itemsBaseURL: 'resources/projects/',
+            items: [
+                { src: 'tbxd-1.png', srct: 'tbxd-1.png', title: '' },
+                { src: 'tbxd-2.png', srct: 'tbxd-2.png', title: '' },
+                { src: 'tbxd-3.png', srct: 'tbxd-3.png', title: '' },
+                { src: 'tbxm-1.png', srct: 'tbxm-1.png', title: '' },
+                { src: 'tbxm-2.png', srct: 'tbxm-2.png', title: '' },
+                { src: 'tbxm-3.png', srct: 'tbxm-3.png', title: '' },
+            ]
+        });
+
+        $("#gallery-zomb").nanogallery2({
+            thumbnailHeight: 300,
+            thumbnailWidth: 300,
+            itemsBaseURL: 'resources/projects/',
+            items: [
+                { src: 'zombie-1.png', srct: 'zombie-1.png', title: '' },
+                { src: 'zombie-2.png', srct: 'zombie-2.png', title: '' },
+                { src: 'zombie-3.png', srct: 'zombie-3.png', title: '' },
+            ]
+        });
+
+        $("#gallery-misc").nanogallery2({
+            thumbnailHeight: 200,
+            thumbnailWidth: 200,
+            itemsBaseURL: 'resources/projects/',
+            thumbnailBorderHorizontal: "5",
+            thumbnailBorderVertical: "1",
+            thumbnailLabel: { titleFontSize: "0.6em", },
+            items: [
+                { src: 'auc-1.png', srct: 'auc-1.png', title: 'Auto Utilization Calculator' },
+                { src: 'auc-2.png', srct: 'auc-2.png', title: 'Auto Utilization Calculator' },
+                { src: 'gen-1.png', srct: 'gen-1.png', title: 'Let\'s Study Genetics' },
+                { src: 'gen-2.png', srct: 'gen-2.png', title: 'Let\'s Study Genetics' },
+                { src: 'devsched-1.png', srct: 'devsched-1.png', title: 'Device Scheduler' },
+                { src: 'demand-1.png', srct: 'demand-1.png', title: 'Power Demand Profiler' },
+                { src: 'trend-1.png', srct: 'trend-1.png', title: 'Trend View' },
+                { src: 'p2b-1.png', srct: 'p2b-1.png', title: 'Play2Bit' },
+                { src: 'p2b-2.png', srct: 'p2b-2.png', title: 'Play2Bit' },
+                { src: 'p2b-3.png', srct: 'p2b-3.png', title: 'Play2Bit' },
+                { src: 'p2b-4.png', srct: 'p2b-4.png', title: 'Play2Bit' },
+                { src: 'uznex-1.png', srct: 'uznex-1.png', title: 'UZNEX' },
+                { src: 'uznex-2.png', srct: 'uznex-2.png', title: 'UZNEX' },
+                { src: 'uznex-3.png', srct: 'uznex-3.png', title: 'UZNEX' },
+                { src: 'top-1.png', srct: 'top-1.png', title: 'Topnight' },
+                { src: 'top-2.png', srct: 'top-2.png', title: 'Topnight' },
+                { src: 'top-3.png', srct: 'top-3.png', title: 'Topnight' },
+            ]
+        });
+    });
+</script>
+
+<div class="content-panel">
+    <h1 class="content-title">MY PROJECTS</h1>
+    <div class="content-body projects">
+        {{!-- <div class="content-desc">Listed below are some of my personal projects or projects I was involved in:
+        </div> --}}
+
+        <div class="project-wrapper">
+
+            <h2>The BullX Trade</h2>
+            <p class="project-desc">South Korean based digital asset trading platform made using React/Next.</p>
+            <div id="gallery-tbx" class="nanogallery-container"></div>
+
+            <h2>Zombied</h2>
+            <p class="project-desc">Web-based poker game with an Express.js backend.</p>
+            <div id="gallery-zomb" class="nanogallery-container"></div>
+
+            <h2>Others</h2>
+            <p class="project-desc">Other projects made with Vue.js, React Native, ASP.NET MVC and others.
+                This is a gallery of my personal projects or company-associated building automation software or website
+                prototypes.</p>
+            <div id="gallery-misc" class="nanogallery-container"></div>
+        </div>
+
+    </div>
+</div>
