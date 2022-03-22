@@ -3,6 +3,7 @@
         $("#gallery-tbx").nanogallery2({
             thumbnailHeight: 300,
             thumbnailWidth: 300,
+            thumbnailAlignment: "fillWidth",
             itemsBaseURL: 'resources/projects/',
             items: [
                 { src: 'tbxd-1.png', srct: 'tbxd-1.png', title: '' },
@@ -17,6 +18,7 @@
         $("#gallery-zomb").nanogallery2({
             thumbnailHeight: 300,
             thumbnailWidth: 300,
+            thumbnailAlignment: "fillWidth",
             itemsBaseURL: 'resources/projects/',
             items: [
                 { src: 'zombie-1.png', srct: 'zombie-1.png', title: '' },
@@ -28,6 +30,7 @@
         $("#gallery-misc").nanogallery2({
             thumbnailHeight: 200,
             thumbnailWidth: 200,
+            thumbnailAlignment: "fillWidth",
             itemsBaseURL: 'resources/projects/',
             thumbnailBorderHorizontal: "5",
             thumbnailBorderVertical: "1",
@@ -54,14 +57,13 @@
     });
 </script>
 
-<div class="content-panel">
+<div class="content-panel gray">
     <h1 class="content-title">MY PROJECTS</h1>
     <div class="content-body projects">
         {{!-- <div class="content-desc">Listed below are some of my personal projects or projects I was involved in:
         </div> --}}
 
         <div class="project-wrapper">
-
             <h2>The BullX Trade</h2>
             <p class="project-desc">South Korean based digital asset trading platform made using React/Next.</p>
             <div id="gallery-tbx" class="nanogallery-container"></div>
