@@ -29,7 +29,7 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
 
-<link href="styles/styles.css" rel="stylesheet"></head>
+<script defer src="scripts/app.js"></script><link href="styles/styles.css" rel="stylesheet"></head>
 <body>
     <div class="app">
         <div id="homediv">
@@ -126,6 +126,34 @@
                         ]
                     });
             
+                    $("#gallery-vnext").nanogallery2({
+                        thumbnailHeight: 300,
+                        thumbnailWidth: 300,
+                        thumbnailAlignment: "fillWidth",
+                        itemsBaseURL: 'resources/projects/',
+                        items: [
+                            { src: 'vnext-int-1.PNG', srct: 'vnext-int-1.PNG', title: '' },
+                            { src: 'vnext-int-2.PNG', srct: 'vnext-int-2.PNG', title: '' },
+                            { src: 'vnext-int-3.PNG', srct: 'vnext-int-3.PNG', title: '' },
+                            { src: 'vnext-ext-1.png', srct: 'vnext-ext-1.png', title: '' },
+                            { src: 'vnext-ext-2.png', srct: 'vnext-ext-2.png', title: '' },
+                            { src: 'vnext-ext-3.png', srct: 'vnext-ext-3.png', title: '' },
+                        ]
+                    });
+            
+                    $("#gallery-vnextdemo").nanogallery2({
+                        thumbnailHeight: 300,
+                        thumbnailWidth: 300,
+                        thumbnailAlignment: "fillWidth",
+                        itemsBaseURL: 'resources/projects/',
+                        items: [
+                            { src: 'vnext-demostore.PNG', srct: 'vnext-demostore.PNG', title: '' },
+                            { src: 'vnext-demostore2.PNG', srct: 'vnext-demostore2.PNG', title: '' },
+                            { src: 'vnext-demostore3.PNG', srct: 'vnext-demostore3.PNG', title: '' },
+                            { src: 'vnext-demostore4.PNG', srct: 'vnext-demostore4.PNG', title: '' },
+                        ]
+                    });
+            
                     $("#gallery-misc").nanogallery2({
                         thumbnailHeight: 200,
                         thumbnailWidth: 200,
@@ -154,6 +182,8 @@
                             { src: 'top-3.png', srct: 'top-3.png', title: 'Topnight' },
                             { src: 'air-1.png', srct: 'air-1.png', title: 'Air Auction' },
                             { src: 'air-2.png', srct: 'air-2.png', title: 'Air Auction' },
+                            { src: 'gen-1.png', srct: 'gen-1.png', title: 'Let\'s Study Genetics' },
+                            { src: 'gen-2.png', srct: 'gen-2.png', title: 'Let\'s Study Genetics' },
                         ]
                     });
                 });
@@ -165,7 +195,8 @@
             
                     <div class="project-wrapper">
                         <h2>The BullX Trade</h2>
-                        <p class="project-desc">South Korean-based digital asset trading platform made using React/Next and SignalR.
+                        <p class="project-desc">South Korean-based digital asset trading platform made using React/Next, Redux and
+                            SignalR.
                         </p>
                         <div id="gallery-tbx" class="nanogallery-container"></div>
             
@@ -173,6 +204,18 @@
                         <p class="project-desc">Web-based poker game with an Express.js backend and Socket.io for game-specific
                             logic.</p>
                         <div id="gallery-zomb" class="nanogallery-container"></div>
+            
+                        <h2>Vesta vNext Platform Dashboards</h2>
+                        <p class="project-desc">Internal and external dashboard applications for Vesta's vNext anti-fraud platform,
+                            made with React/Next, Redux, MaterialUI and others.
+                        </p>
+                        <div id="gallery-vnext" class="nanogallery-container"></div>
+            
+                        <h2>Vesta vNext Demo Store</h2>
+                        <p class="project-desc">Demo store application used by Vesta's sales team. Developed with React/Next, Redux,
+                            MaterialUI.
+                        </p>
+                        <div id="gallery-vnextdemo" class="nanogallery-container"></div>
             
                         <h2>Others</h2>
                         <p class="project-desc">Other projects made with Vue.js, React Native, React, ASP.NET MVC and others.
@@ -257,6 +300,6 @@
                         </div> -->
             </div>
         </div>    </div>
-<script src="scripts/app.js"></script></body>
+</body>
 
 </html>

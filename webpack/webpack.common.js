@@ -21,42 +21,36 @@ module.exports = {
         new CleanWebpackPlugin(),
 
         //Folders
-        new CopyWebpackPlugin([{
-            from: Path.resolve(__dirname, '../src/files'),
-            to: 'files'
-        }]),
-        new CopyWebpackPlugin([{
-            from: Path.resolve(__dirname, '../src/resources'),
-            to: 'resources'
-        }]),
-        new CopyWebpackPlugin([{
-            from: Path.resolve(__dirname, '../src/scripts'),
-            to: 'scripts'
-        }]),
-        new CopyWebpackPlugin([{
-            from: Path.resolve(__dirname, '../src/root'),
-            to: './'
-        }]),
-
-        //SEO
-        new CopyWebpackPlugin([{
-            from: Path.resolve(__dirname, '../src/googleb64fcb9a8d463f38.html'),
-            to: "googleb64fcb9a8d463f38.html",
-        }]),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: Path.resolve(__dirname, '../src/files'),
+                    to: 'files'
+                },
+                {
+                    from: Path.resolve(__dirname, '../src/resources'),
+                    to: 'resources'
+                },
+                {
+                    from: Path.resolve(__dirname, '../src/scripts'),
+                    to: 'scripts'
+                },
+                {
+                    from: Path.resolve(__dirname, '../src/root'),
+                    to: './'
+                },
+                // {
+                //     from: Path.resolve(__dirname, '../src/googleb64fcb9a8d463f38.html'),
+                //     to: "googleb64fcb9a8d463f38.html",
+                // }
+            ],
+        }),
 
         //Pages
         new HtmlWebpackPlugin({
             template: Path.resolve(__dirname, '../src/index.hbs'),
             minify: false
         }),
-
-
-        // new HtmlWebpackPlugin({
-        //     title: 'Login',
-        //     filename: "login.html",
-        //     template: Path.resolve(__dirname, '../src/views/pages/auth/login.hbs'),
-        //     minify: false
-        // }),
     ],
     resolve: {
         alias: {
