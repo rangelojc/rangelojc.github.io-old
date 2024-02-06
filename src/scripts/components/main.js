@@ -41,11 +41,12 @@ const Main = function () {
         new Typed('.hero-text.sub', {
             strings: [
                 "A WEB DEVELOPER^500",
-                "A SOFTWARE DEVELOPER^500",
+                "A SOFTWARE ENGINEER^500",
                 "A CODE AUTHOR^500",
-                "A COFFEE DRINKER^500",
-                "A TEA SIPPER^500",
-                "A VIDEO GAME ENJOYER^500",
+                "A COFFEE ADDICT^500",
+                "A GYM RAT^500",
+                "A DIET FREAK^500",
+                "A GAMER^500",
                 "A PART-TIME SIM RACER^500",
                 "A PART-TIME VIRTUAL TRUCKER^500"
             ],
