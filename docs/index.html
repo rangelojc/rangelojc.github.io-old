@@ -97,6 +97,23 @@
                 </div>
             </div>    <script>
                 $(document).ready(function () {
+                $("#gallery-kater").nanogallery2({
+                        thumbnailHeight: 300,
+                        thumbnailWidth: 300,
+                        thumbnailAlignment: "fillWidth",
+                        itemsBaseURL: 'resources/projects/kater/',
+                        items: [
+                            { src: 'kater (17).png', srct: 'kater (17).png', title: '' },
+                            { src: 'kater (2).png', srct: 'kater (2).png', title: '' },
+                            { src: 'kater (1).png', srct: 'kater (1).png', title: '' },
+                            { src: 'kater (15).png', srct: 'kater (15).png', title: '' },
+                            { src: 'kater (4).png', srct: 'kater (4).png', title: '' },
+                            { src: 'kater (5).png', srct: 'kater (5).png', title: '' },
+                            { src: 'kater (6).png', srct: 'kater (6).png', title: '' },
+                            { src: 'kater (18).png', srct: 'kater (18).png', title: '' },
+                        ]
+                    });
+            
                     $("#gallery-tbx").nanogallery2({
                         thumbnailHeight: 300,
                         thumbnailWidth: 300,
@@ -194,6 +211,12 @@
                 <div class="content-body projects">
             
                     <div class="project-wrapper">
+                        
+                        <h2>Kater.ai</h2>
+                        <p class="project-desc">Various fully functional screens for Kater's LLM-based business intelligence tool. Developed with Vite, React, Xyflow/Reactflow, TailwindCSS, Zustand, HeadlessUI and others.
+                        </p>
+                        <div id="gallery-kater" class="nanogallery-container"></div>
+            
                         <h2>The BullX Trade</h2>
                         <p class="project-desc">South Korean-based digital asset trading platform made using React/Next, Redux and
                             SignalR.
@@ -218,6 +241,7 @@
                         </p>
                         <div id="gallery-vnextdemo" class="nanogallery-container"></div>
             
+            
                         <h2>Others</h2>
                         <p class="project-desc">Other projects made with Vue.js, React Native, React, ASP.NET MVC and others.
                             This is a gallery of my personal projects or company-associated website prototypes and
@@ -226,7 +250,8 @@
                     </div>
             
                 </div>
-            </div>    <div class="content-panel">
+            </div>
+            <div class="content-panel">
                 <h1 class="content-title">GALLERY</h1>
                 <div class="content-body">
                     <div class="gallery-wrapper">
