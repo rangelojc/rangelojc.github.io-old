@@ -52,10 +52,6 @@
     }
 
     @include mQueryGeneral {
-        .gallery-wrapper {
-            /* max-height: 500px; */
-        }
-
         .gallery-item {
             width: 40%;
         }
