@@ -1,5 +1,3 @@
-const RES_PATH = ("files/resume.pdf");
-
 const Main = function () {
     const component = {};
 
@@ -23,7 +21,6 @@ const Main = function () {
     }
 
     component.setEvents = function () {
-        resume_button.onclick = function () { component.open(RES_PATH); }
     }
 
     component.lazyLoad = function () {

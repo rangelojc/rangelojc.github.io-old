@@ -88,12 +88,13 @@
         }
 
 
-        .resume-button-wrapper {
+        .hero-button-wrapper {
             width: 100%;
             height: auto;
             margin-top: 50px;
 
-            #resume_button {
+            #hero_button {
+                display: inline-block;
                 border: 0;
                 background-color: $primary;
                 color: #fdfdfd;
@@ -106,6 +107,10 @@
                 transition: 200ms ease;
                 -webkit-transition: 200ms ease;
                 -ms-transition: 200ms ease;
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+                text-decoration: none;
 
                 &:hover {
                     background-color: darken($primary, 10%);
